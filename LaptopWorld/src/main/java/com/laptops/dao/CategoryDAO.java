@@ -8,6 +8,8 @@ public interface CategoryDAO {
 	public void addCategory(Category category);
 
 	public List<Category> fetchAllCategories();
+	
+	public String fetchAllCategoriesByJson();
 
 	public Category getCategoryById(int categoryId);
 

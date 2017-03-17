@@ -12,7 +12,9 @@ body {
 <form:form modelAttribute="category" action="addCategory">
 	<form:input path="categoryId" type="hidden" />
 	<form:input path="categoryName" />
+	<form:errors path="categoryName" /><br>
 	<form:input path="categoryDescription" />
+	<form:errors path="categoryDescription" /><br>
 	<input type="submit" value="Add Category" />
 </form:form>
 

@@ -12,10 +12,10 @@ import com.laptops.model.SubCategory;
 @Service
 @Transactional
 public class SubCategoryService {
-	
+
 	@Autowired
 	private SubCategoryDAOImpl subCategoryDAOImpl;
-	
+
 	public void addSubCategory(SubCategory subCategory) {
 		subCategoryDAOImpl.addSubCategory(subCategory);
 	}
@@ -24,12 +24,16 @@ public class SubCategoryService {
 		return subCategoryDAOImpl.fetchAllSubCategories();
 	}
 
+	public String fetchAllSubCategoriesByJson() {
+		return subCategoryDAOImpl.fetchAllSubCategoriesByJson();
+	}
+
 	public SubCategory getSubCategoryById(int subCategoryId) {
 		return subCategoryDAOImpl.getSubCategoryById(subCategoryId);
 	}
 
-	public void deteleSubCategory(int subCategoryId) {
-		subCategoryDAOImpl.deteleSubCategory(subCategoryId);
+	public void deleteSubCategory(int subCategoryId) {
+		subCategoryDAOImpl.deleteSubCategory(subCategoryId);
 	}
-	
+
 }

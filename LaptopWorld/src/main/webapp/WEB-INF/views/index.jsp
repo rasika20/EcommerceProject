@@ -14,5 +14,20 @@
 <br>
 <a href="subCategoryPage" class="btn btn-primary" role="button">Click for Sub-Category List</a>
 <br>
+<br>
+<a href="brandPage" class="btn btn-primary" role="button">Click for Brand List</a>
+<br>
+<br>
+<a href="supplierPage" class="btn btn-primary" role="button">Click for Supplier List</a>
+<br>
+<br>
+<a href="productPage" class="btn btn-primary" role="button">Click for Product List</a>
+<br>
+<br>
+<a href="loginPage" class="btn btn-primary" role="button">Click for Login Page</a>
+<br>
+<br>
+<a href="registrationPage" class="btn btn-primary" role="button">Click for Registration Page</a>
+<br>
 </body>
 </html>

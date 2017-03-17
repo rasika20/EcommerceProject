@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page isELIgnored="false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,7 +18,7 @@
 
 </head>
 <body>
-
+	
 	<%-- <nav class="navbar navbar-default">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -74,11 +75,11 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Lappy World</a>
+			<a class="navbar-brand" href="#">Laptop World</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a href="/LaptopWorld/">Home</a></li>
 				<li><a href="aboutus">About us</a></li>
 				<li><a href="contactus">Contact us</a></li>
 				<li><a href="#">FAQ</a></li>
@@ -88,19 +89,34 @@
 					<input type="text" class="form-control" placeholder="Search">
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
+			</form>	
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span
-						class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+			
+				<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>
+					    Cart</a></li>
+				<li><a href="registrationPage"><span class="glyphicon glyphicon-user"></span>
 						Sign Up</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+				<li><a href="loginPage"><span class="glyphicon glyphicon-log-in"></span>
 						Login</a></li>
+				<li><a href="logout"><span class="glyphicon glyphicon-log-out"></span>
+						Logout</a></li>
 			</ul>
 		</div>
 	</div>
 	</nav>
-
+	
+    <sec:authorize access="isAuthenticated()">  
+        <strong><sec:authentication property="principal.username"/></strong>
+    </sec:authorize>
+	
+	
+	
+	
+	<%-- 
+	<div class="text-right">
+	<sec:authorize access="isAuthenticated()" /> 
+	Welcome : <sec:authentication property="principal.username" />
+	</div> --%>
 	
 
 
@@ -110,5 +126,6 @@
 
 	<script src="resources/js/jquery-3.1.1.min.js"></script>
 	<script src="resources/js/bootstrap.min.js"></script>
+	<script src="resources/js/angular.min.js" ></script>
 </body>
 </html>

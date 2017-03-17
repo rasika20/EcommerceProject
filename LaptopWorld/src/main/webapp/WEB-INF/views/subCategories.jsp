@@ -12,11 +12,11 @@ body {
 <form:form modelAttribute="subCategory" action="addSubCategory">
 	<form:input path="subCategoryId" type="hidden" />
 	<form:input path="subCategoryName" />
+	<form:errors path="subCategoryName" /><br>
 	<form:input path="subCategoryDescription" />
+	<form:errors path="subCategoryDescription" /><br>
 	<form:select path="categoryId" items="${categoryList}" itemLabel="categoryName"
 		itemValue="categoryId"></form:select>
-	<%-- <form:radiobuttons name="catId" path="categoryId" items="${categoryList}" itemLabel="categoryName"
-		itemValue="categoryId" /> --%>
 	<input type="submit" value="Add Sub-Category" />
 </form:form>
 
