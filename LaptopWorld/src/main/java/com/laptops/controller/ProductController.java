@@ -77,7 +77,8 @@ public class ProductController {
 			model.addAttribute("brandListByJson", brandService.fetchAllBrandByJson());
 			model.addAttribute("btnLabel", "Retry");
 			return "products";
-		} /*else {
+		}
+		/*else {
 			productService.addProduct(product);
 
 			if (!productImage.isEmpty()) {

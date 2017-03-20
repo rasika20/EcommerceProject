@@ -43,6 +43,7 @@ public class SupplierController {
 	@RequestMapping("/editSupplier-{supplierId}")
 	public String editSupplier(Model model, @PathVariable("supplierId") int supplierId) {
 		model.addAttribute("supplier", supplierService.getSupplierById(supplierId));
+		model.addAttribute("supplierList", supplierService.fetchAllSupplier());
 		model.addAttribute("supplierListByJson", supplierService.fetchAllSupplierByJson());
 		model.addAttribute("btnLabel", "Edit Supplier");
 		return "suppliers";

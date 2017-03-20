@@ -31,7 +31,7 @@ public class SubCategoryController {
 		model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());
 		model.addAttribute("categoryListByJson", categoryService.fetchAllCategoriesByJson());
 		model.addAttribute("btnLabel", "Add Sub-Category");
-		return "subCategories";
+		return "subcategories";
 	}
 	
 	@RequestMapping("/addSubCategory")
@@ -57,7 +57,7 @@ public class SubCategoryController {
 		model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());
 		model.addAttribute("categoryListByJson", categoryService.fetchAllCategoriesByJson());
 		model.addAttribute("btnLabel", "Edit Sub-category");
-		return "subCategories";
+		return "subcategories";
 	}
 
 	@RequestMapping("/deleteSubCategory-{subCategoryId}")
