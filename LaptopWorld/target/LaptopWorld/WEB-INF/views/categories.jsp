@@ -12,7 +12,7 @@ body {
 	
 	<div class="text-center">
 		<h1>
-			<u>Category Form</u>
+			<strong>Category Form</strong>
 		</h1>
 	</div>
 	<br>

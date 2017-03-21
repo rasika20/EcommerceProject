@@ -44,6 +44,6 @@ public class UserController {
 		if (authentication != null) {
 			new SecurityContextLogoutHandler().logout(request, response, authentication);
 		}
-		return "Login";
+		return "redirect:/";
 	}
 }

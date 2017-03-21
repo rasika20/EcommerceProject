@@ -19,4 +19,10 @@ public class HomeController {
 	public String getContactUsPage() {
 		return "contactus";
 	}
+	
+	@RequestMapping("/demo")
+	public String getDemoPage() {
+		return "demo";
+	}
+	
 }

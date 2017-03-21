@@ -8,62 +8,185 @@ body {
 }
 </style>
 
+<div class="container">
+	
+	<div class="text-center">
+		<h1>
+			<u>Product Form</u>
+		</h1>
+	</div>
+	<br>
+	<div class="form">
+		<form:form modelAttribute="product" action="addProduct">
+			<form:input path="productId" type="hidden" />
 
-<form:form modelAttribute="product" action="addProduct">
-	<form:input path="productId" type="hidden" />
-	<form:input path="productName" />
-	<form:errors path="productName" /><br>
-	<form:input path="productDescription" />
-	<form:errors path="productDescription" /><br>
-	<form:input path="productActualPrice" /><br>
-	<form:input path="productDiscount" /><br>
-	<form:input path="productMadeCountry" />
-	<form:errors path="productMadeCountry" /><br>
-	<form:input path="productStock" /><br>
-	<form:select path="categoryId" items="${categoryList}" itemLabel="categoryName"
-		itemValue="categoryId"></form:select>
-	<form:select path="subCategoryId" items="${subCategoryList}" itemLabel="subCategoryName"
-		itemValue="subCategoryId"></form:select>
-	<form:select path="brandId" items="${brandList}" itemLabel="brandName"
-		itemValue="brandId"></form:select>
-	<form:select path="supplierId" items="${supplierList}" itemLabel="supplierName"
-		itemValue="supplierId"></form:select>
-	<input type="submit" value="Add Product" />
-</form:form>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productName">Enter Product Name</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productName"
+						placeholder="Product Name" autofocus="true" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productName" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productDescription">Enter Product Description</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productDescription"
+						placeholder="Product Description" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productDescription" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productActualPrice">Enter Product Actual Price</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productActualPrice"
+						placeholder="Product Actual Price" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productActualPrice" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productDiscount">Enter Product Discount</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productDiscount"
+						placeholder="Product Discount" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productDiscount" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productMadeCountry">Enter Product Made Country</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productMadeCountry"
+						placeholder="Product Made Country" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productMadeCountry" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productStock">Enter Product Stock</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productStock"
+						placeholder="Product Stock" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productStock" />
+				</div>
+			</div>
+			<br>			
+			<div class="row">
+				<div class="col-xs-12 col-sm-4  col-md-4"> 
+					<form:label path="categoryId">Select Category of Product</form:label>
+				</div>	 
+				<div class="col-xs-12 col-sm-4  col-md-4">					
+					<form:select class="form-control" path="categoryId" items="${categoryList}" itemValue="categoryId" itemLabel="categoryName"/>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4  col-md-4"> 
+					<form:label path="subCategoryId">Select Sub-Category of Product</form:label>
+				</div>	 
+				<div class="col-xs-12 col-sm-4  col-md-4">					
+					<form:select class="form-control" path="subCategoryId" items="${subCategoryList}" itemValue="subCategoryId" itemLabel="subCategoryName"/>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4  col-md-4"> 
+					<form:label path="brandId">Select Brand of Product</form:label>
+				</div>	 
+				<div class="col-xs-12 col-sm-4  col-md-4">					
+					<form:select class="form-control" path="brandId" items="${brandList}" itemValue="brandId" itemLabel="brandName"/>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4  col-md-4"> 
+					<form:label path="supplierId">Select Supplier of Product</form:label>
+				</div>	 
+				<div class="col-xs-12 col-sm-4  col-md-4">					
+					<form:select class="form-control" path="supplierId" items="${supplierList}" itemValue="supplierId" itemLabel="supplierName"/>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="text-center">
+						<button class="btn btn-success" type="submit">${btnLabel}
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+						<button class="btn btn-danger" type="reset">
+							Reset <span class="glyphicon glyphicon-repeat"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</form:form>
+	</div>
+</div>
+<br>
 
-<table class="table">
-	<tr>
-		<th>Product Name</th>
-		<th>Product Description</th>
-		<th>Product Actual Price</th>
-		<th>Product Discount</th>
-		<th>Product Actual Made In Country</th>
-		<th>Product Actual Stock</th>
-		<th>Category Name</th>
-		<th>Sub-Category Name</th>
-		<th>Brand Name</th>
-		<th>Supplier Name</th>
-		<th>Product Edit</th>
-		<th>Product Delete</th>
-	</tr>
-	<c:forEach items="${productList}" var="pList">
+<div class="table-responsive">
+	<table class="table">
 		<tr>
-			<td>${pList.productName}</td>
-			<td>${pList.productDescription}</td>
-			<td>${pList.productActualPrice}</td>
-			<td>${pList.productDiscount}</td>
-			<td>${pList.productMadeCountry}</td>
-			<td>${pList.productStock}</td>
-			<td>${pList.category.categoryName}</td>
-			<td>${pList.subCategory.subCategoryName}</td>
-			<td>${pList.brand.brandName}</td>
-			<td>${pList.supplier.supplierName}</td>
-			<td><a href="editProduct-${pList.productId}">EDIT</a></td>
-			<td><a href="deleteProduct-${pList.productId}">DELETE</a></td>
+			<th>Product Name</th>
+			<th>Product Description</th>
+			<th>Product Actual Price</th>
+			<th>Product Discount</th>
+			<th>Product Made Country</th>
+			<th>Product Stock</th>
+			<th>Category Name</th>
+			<th>Sub-Category Name</th>
+			<th>Brand Name</th>
+			<th>Supplier Name</th>
+			<th>Product Edit</th>
+			<th>Product Delete</th>
 		</tr>
-	</c:forEach>
+		<c:forEach items="${productList}" var="pList">
+			<tr>
+				<td>${pList.productName}</td>
+				<td>${pList.productDescription}</td>
+				<td>${pList.productActualPrice}</td>
+				<td>${pList.productDiscount}</td>
+				<td>${pList.productMadeCountry}</td>
+				<td>${pList.productStock}</td>
+				<td>${pList.category.categoryName}</td>
+				<td>${pList.subCategory.subCategoryName}</td>
+				<td>${pList.brand.brandName}</td>
+				<td>${pList.supplier.supplierName}</td>
+				<td><a href="editProduct-${pList.productId}" class="btn btn-primary" role="button">EDIT</a></td>
+				<td><a href="deleteProduct-${pList.productId}" class="btn btn-warning" role="button">DELETE</a></td>
+			</tr>
+		</c:forEach>
 
-</table>
+	</table>
+</div>
+
 
 <a href="/LaptopWorld/" class="btn btn-primary" role="button">Return to home</a>
 <br>
