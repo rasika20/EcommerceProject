@@ -190,3 +190,5 @@ body {
 
 <a href="/LaptopWorld/" class="btn btn-primary" role="button">Return to home</a>
 <br>
+
+<%@ include file="footer.jsp"%>

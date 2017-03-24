@@ -16,7 +16,9 @@ body {
 	<form:input path="lname" placeholder="last name" />
 	<form:input path="dob" placeholder="date of birth" />
 	<form:input path="contactNo" placeholder="contact number" />
-	<form:input path="alternateContactNo" placeholder="alternate contact number" />
+	<form:input path="alternateContactNo" placeholder="Alternate contact number" />
 	<input type="submit" value="signup" />
 	<input type="reset" value="Reset" />
 </form:form>
+
+<%@ include file="footer.jsp"%>

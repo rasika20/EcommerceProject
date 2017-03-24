@@ -6,6 +6,6 @@ body {
 }
 </style>
 
-<h1>About us Page!</h1>
+<h1>FAQ Page!</h1>
 
 <%@ include file="footer.jsp"%>

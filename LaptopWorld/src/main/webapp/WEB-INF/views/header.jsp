@@ -14,8 +14,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+<link href="resources/css/backtotop.css" rel="stylesheet" />
 <link href="resources/css/brandlogo.css" rel="stylesheet" />
-<link rel="stylesheet" href="resources/css/slider.css" />
 
 <title>Laptop World</title>
 
@@ -30,6 +31,7 @@ body {
 </head>
 <body>
 
+	<!-- Navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -57,11 +59,12 @@ body {
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
 
+			<!-- Conditional Buttons -->
 			<ul class="nav navbar-nav navbar-right">
 
 				<c:if test="${pageContext.request.userPrincipal.name==null}">
-					<!-- <li><a href="#myModal" data-toggle="modal" > -->
-					<li><a href="loginPage"><span
+
+					<li><a href="#loginModal" data-toggle="modal"><span
 							class="glyphicon glyphicon-log-in"></span> Login</a></li>
 					<li><a href="registrationPage"><span
 							class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -96,7 +99,7 @@ body {
 								<li><a href="#">Profile</a></li>
 								<li><a href="#">Cart</a></li>
 								<li><a href="#">Wish List</a></li>
-								<li><a href="#">Order History</a></li>
+								<li><a href="#">Recent Orders</a></li>
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span
 										class="glyphicon glyphicon-log-out"></span></a></li>
@@ -111,12 +114,74 @@ body {
 
 
 
-
-
-	<script src="resources/js/jquery-3.2.0.min.js"></script>
-	<script src="resources/js/bootstrap.min.js"></script>
-	<script src="resources/js/angular.min.js"></script>
-
-
-</body>
-</html>
+	<!-- Login Modal -->
+	<div id="loginModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Login to
+						LaptopWorld.com</h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xs-6">
+							<div class="well">
+								<form name="form-login" method="POST" action="perform_login">
+									<div class="form-group">
+										<label for="username" class="control-label">Email ID</label> <input
+											type="text" class="form-control" id="username"
+											name="username" value="" required=""
+											title="Please enter you username"
+											placeholder="example@gmail.com" autofocus="true"> <span
+											class="help-block"></span>
+									</div>
+									<div class="form-group">
+										<label for="password" class="control-label">Password</label> <input
+											type="password" class="form-control" id="password"
+											name="password" value="" required=""
+											title="Please enter your password"> <span
+											class="help-block"></span>
+									</div>
+									<div id="loginErrorMsg" class="alert alert-error hide">Wrong
+										username og password</div>
+									<div class="checkbox">
+										<label> <input type="checkbox" name="remember"
+											id="remember"> Remember login
+										</label>
+										<p class="help-block">(if this is a private computer)</p>
+									</div>
+									<button type="submit" class="btn btn-success btn-block">Login</button>
+									<a href="/forgot/" class="btn btn-default btn-block">Forgot
+										Password?</a>
+								</form>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<p class="lead">New User?</p>
+							<p class="lead">
+								Register now for <span class="text-success">FREE!</span>
+							</p>
+							<ul class="list-unstyled" style="line-height: 2">
+								<li><span class="fa fa-check text-success"></span> See all
+									your orders!</li>
+								<li><span class="fa fa-check text-success"></span>
+									Personalized Cart!</li>
+								<li><span class="fa fa-check text-success"></span> Save
+									your favorites to Wish List!</li>
+								<li><span class="fa fa-check text-success"></span> Fast
+									Checkout!</li>
+								<li><a href="faq"><u>Read more</u></a></li>
+							</ul>
+							<br>
+							<p>
+								<a href="registrationPage" class="btn btn-info btn-block">Register
+									Now!</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
