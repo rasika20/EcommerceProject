@@ -17,6 +17,11 @@
 <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
 <link href="resources/css/backtotop.css" rel="stylesheet" />
 <link href="resources/css/brandlogo.css" rel="stylesheet" />
+<link href="resources/css/slider.css" rel="stylesheet" />
+<link href="resources/css/jquery.jscrollpane.css" rel="stylesheet"
+	media="all" />
+<link href="resources/css/scroller.css" rel="stylesheet" />
+
 
 <title>Laptop World</title>
 
@@ -31,7 +36,68 @@ body {
 </head>
 <body>
 
-	<!-- Navbar -->
+	<!-- <div class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+
+			<div class="collapse navbar-collapse col-lg-6 col-md-6">
+				<ul class="nav navbar-nav  navbar-left">
+					<li><img src="images/genericLogo.png">
+					<a href="#">MySite.com</a></li>
+				</ul>
+			</div>
+
+			<div class="collapse navbar-collapse navbar-right col-lg-6 col-md-6">
+				<div class="dropdown">
+					<button id="userMenu" class="btn dropdown-toggle btn-primary"
+						type="button" data-toggle="dropdown">
+						<span>username@domainName.com </span><span
+							class="caret userButton"></span>
+					</button>
+
+					<ul class="dropdown-menu" role="menu" aria-labelledby="userMenu">
+						<li role="presentation"><a href="#" tabindex="-1"
+							role="menuitem">View Details</a></li>
+						<li role="presentation"><a href="#" tabindex="-1"
+							role="menuitem">Edit</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a href="#" tabindex="-1"
+							role="menuitem">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse"
+					data-target="#mainNav">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="collapse navbar-collapse" id="mainNav">
+					<ul id="navlist" class="nav nav-justified">
+						<li><a href="#">Reports</a></li>
+						<li><a href="#">Account Management</a></li>
+						<li><a href="#">Messages</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Request a Quote</a></li>
+						<li><a href="#">MainSite.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</div> -->
+
+
+		<!-- Navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">

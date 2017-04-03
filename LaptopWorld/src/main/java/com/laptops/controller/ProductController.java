@@ -41,7 +41,7 @@ public class ProductController {
 	@Autowired
 	private BrandService brandService;
 
-	/*private String Data_Folder = "D:\\NewProject\\LaptopWorld\\src\\main\\webapp\\resources\\productImages\\";*/
+	private String Data_Folder = "D:\\NewProject\\LaptopWorld\\src\\main\\webapp\\resources\\productImages\\";
 
 	@RequestMapping("/productPage")
 	public String getProductPage(Model model) {
@@ -63,7 +63,7 @@ public class ProductController {
 
 	@RequestMapping("/addProduct")
 	public String addProduct(@Valid @ModelAttribute("product") Product product, BindingResult result,
-			/*@RequestParam("productImage") MultipartFile productImage,*/ Model model) {
+			@RequestParam("productImage") MultipartFile productImage, Model model) {
 		if (result.hasErrors()) {
 			model.addAttribute("productList", productService.fetchAllProduct());
 			model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());
@@ -78,7 +78,7 @@ public class ProductController {
 			model.addAttribute("btnLabel", "Retry");
 			return "products";
 		}
-		/*else {
+		else {
 			productService.addProduct(product);
 
 			if (!productImage.isEmpty()) {
@@ -103,7 +103,7 @@ public class ProductController {
 			} else {
 				model.addAttribute("filemessage", "Image file is required");
 			}
-		}*/
+		}
 		productService.addProduct(product);
 		return "redirect:/productPage";
 	}

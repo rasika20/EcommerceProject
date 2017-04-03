@@ -10,8 +10,7 @@
 	Launch Demo Modal</a>
 <br>
 <br>
-<a href="productPage" class="btn btn-primary" data-toggle="modal">
-	Product Page</a>
+<a href="productPage" class="btn btn-primary" >Product Page</a>
 <br>
 
 <%@ include file="footer.jsp"%>
