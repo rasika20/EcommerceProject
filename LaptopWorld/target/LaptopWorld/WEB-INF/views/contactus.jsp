@@ -48,4 +48,6 @@ $(document).ready(function() {
 });
 $("#wrapper").toggleClass("toggled");
 </script>
+
+
 <%@include file="footer.jsp" %>

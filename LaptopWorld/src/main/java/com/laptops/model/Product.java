@@ -76,8 +76,8 @@ public class Product {
 	@JoinColumn(name = "brandId", nullable = false, updatable = false, insertable = false)
 	private Brand brand;
 
-	/*@Transient
-	private List<MultipartFile> productImage;*/
+	@Transient
+	private List<MultipartFile> productImage;
 
 	public int getProductId() {
 		return productId;
@@ -199,12 +199,12 @@ public class Product {
 		this.brand = brand;
 	}
 
-	/*public List<MultipartFile> getProductImage() {
+	public List<MultipartFile> getProductImage() {
 		return productImage;
 	}
 
 	public void setProductImage(List<MultipartFile> productImage) {
 		this.productImage = productImage;
-	}*/
+	}
 
 }

@@ -7,6 +7,13 @@ body {
 	padding-top: 140px;
 }
 </style>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("table").toggle();
+    });
+});
+</script>
 
 <div class="container">
 
@@ -17,7 +24,8 @@ body {
 	</div>
 	<br>
 	<div class="form">
-		<form:form modelAttribute="product" action="addProduct">
+		<form:form modelAttribute="product" action="addProduct"
+			enctype="multipart/form-data">
 			<form:input path="productId" type="hidden" />
 
 			<div class="row">
@@ -141,11 +149,19 @@ body {
 				</div>
 			</div>
 			<br>
-			<%-- <form:label path="productImage">Image</form:label>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productImage">Upload Product Image</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input type="file" accept=".jpg,.jpeg,.png"
+						class="btn btn-default form-control	" path="productImage" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productImage" />
+				</div>
+			</div>
 			<br>
-			<form:input type="file" accept=".jpg,.jpeg,.png"
-				class="btn btn-default special-textbox" path="productImage" />
-			<br> --%>
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
 					<div class="text-center">
@@ -160,9 +176,19 @@ body {
 			</div>
 		</form:form>
 	</div>
+	
+	<br>
+	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+	<br>
+	
+	
 </div>
 <br>
 
+<button type="button" class="btn btn-primary text-center">Show/Hide Table</button>
+
+<br>
+<br>
 <div class="table-responsive">
 	<table class="table">
 		<tr>
@@ -211,3 +237,5 @@ body {
 <br>
 
 <%@ include file="footer.jsp"%>
+
+

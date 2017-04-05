@@ -7,11 +7,14 @@ body {
 </style>
 
 <form name="form-login" action="perform_login" method="post">
-	Username <input type="text" name="username" />
-	Password <input type="password" name="password" />
-	
-	<input type="submit" value="Log-In" />
+	Email ID <input type="text" name="username" /> Password <input
+		type="password" name="password" />
+	<button type="submit" class="btn btn-warning" value="Submit">
+		<i class="glyphicon glyphicon-arrow-right">	</i> Log-in
+	</button>
 	<input type="reset" value="Reset" />
 </form>
 
-<%@ include file="header.jsp"%>
+<br>
+
+<%@ include file="footer.jsp"%>
