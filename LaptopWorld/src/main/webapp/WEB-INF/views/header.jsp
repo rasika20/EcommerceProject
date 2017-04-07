@@ -18,6 +18,7 @@
 <link href="resources/css/backtotop.css" rel="stylesheet" />
 <link href="resources/css/brandlogo.css" rel="stylesheet" />
 <link href="resources/css/slider.css" rel="stylesheet" />
+<link href="resources/css/navbar.css" rel="stylesheet" />
 <!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet"
 	media="all" />
 <link href="resources/css/scroller.css" rel="stylesheet" /> -->
@@ -106,7 +107,7 @@ body {
 	</div> -->
 
 
-		<!-- Navbar -->
+	<!-- Navbar -->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -124,15 +125,29 @@ body {
 				<li><a href="/LaptopWorld/">Home</a></li>
 				<li><a href="aboutus">About us</a></li>
 				<li><a href="contactus">Contact us</a></li>
-				<li><a href="#">FAQ</a></li>
+				<li><a href="faq">FAQ</a></li>
+
+				<li class="dropdown"><a href="#" class="dropdown-toggle"
+					data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span>Search
+						<b class="caret"></b></a>
+					<ul class="dropdown-menu" style="min-width: 300px;">
+						<li>
+							<div class="row">
+								<div class="col-md-12">
+									<form class="navbar-form navbar-left" role="search">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Search" />
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="button">Go!</button>
+											</span>
+										</div>
+									</form>
+								</div>
+							</div>
+						</li>
+					</ul></li>
 			</ul>
 
-			<form class="navbar-form navbar-left">
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search">
-				</div>
-				<button type="submit" class="btn btn-default">Submit</button>
-			</form>
 
 			<!-- Conditional Buttons -->
 			<ul class="nav navbar-nav navbar-right">
@@ -149,15 +164,18 @@ body {
 
 					<sec:authorize access="hasRole('ROLE_ADMIN')">
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown"> Admin Panel <span
-								class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+							data-toggle="dropdown">
+								${pageContext.request.userPrincipal.name} <span
+								class="glyphicon glyphicon-user"></span> <span class="caret"></span>
+						</a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="categoryPage">Category Management</a></li>
+								<li><a href="adminPanelPage">Admin Panel</a></li>
+								<!-- <li><a href="categoryPage">Category Management</a></li>
 								<li><a href="subCategoryPage">Sub-Category Management</a></li>
 								<li><a href="brandPage">Brand Management</a></li>
 								<li><a href="supplierPage">Supplier Management</a></li>
 								<li><a href="productPage">Product Management</a></li>
-								<li><a href="#">User Management</a></li>
+								<li><a href="#">User Management</a></li> -->
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span
 										class="glyphicon glyphicon-log-out"></span></a></li>

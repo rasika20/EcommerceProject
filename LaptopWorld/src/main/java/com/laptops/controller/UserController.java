@@ -46,4 +46,10 @@ public class UserController {
 		}
 		return "redirect:/";
 	}
+	
+	@RequestMapping("/adminPanelPage")
+	public String getAdminPanelPage()
+	{
+		return "adminpanel";
+	}
 }

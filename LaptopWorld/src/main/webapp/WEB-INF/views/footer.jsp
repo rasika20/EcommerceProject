@@ -1,9 +1,12 @@
 
 <br>
 <br>
-<hr style="height:2px;border-width:0;color:gray;background-color:black">
-<hr style="height:2px;border-width:0;color:gray;background-color:black">
-<h1>Hello.. Footer</h1>
+<hr style="height: 2px; border-width: 0; color: gray; background-color: black">
+
+<div class="container">
+	<br>
+	<h1>Hello.. Footer</h1>
+</div>
 
 <div class="scroll-top-wrapper ">
 	<span class="scroll-top-inner"> <b>Back to top</b> <i

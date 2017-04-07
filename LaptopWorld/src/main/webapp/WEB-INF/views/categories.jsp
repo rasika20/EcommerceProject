@@ -8,6 +8,21 @@ body {
 }
 </style>
 
+<script>
+	$(document).ready(function() {
+		$("tbody").hide();
+		$("button").click(function() {
+			$("tbody").toggle(500);
+		});
+	});
+	$(document).ready(function() {
+		$('.search1').hide();
+		$('button').click(function() {
+			$('.search1').toggle(500);
+		});
+	});
+</script>
+
 <div class="container">
 
 	<div class="text-center">
@@ -60,55 +75,73 @@ body {
 			</div>
 		</form:form>
 	</div>
-	
+
 	<br>
-	<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+	<hr
+		style="height: 2px; border-width: 0; color: gray; background-color: gray">
 	<br>
-	
-	<div ng-app="myApp1">
+
+
+	<div ng-app="myApp">
 		<div class="text-center">
 			<h1>Category List</h1>
 		</div>
+		<br>
 		<div class="row">
-			<div class="input-group col-xs-12 col-md-4 col-sm-4">
-				<input class="form-control" type="text" ng-model="search"
-					placeholder="Search.." />
-				<div class="input-group-btn">
-					<button class="btn btn-default" type="submit">
-						<span class="glyphicon glyphicon-search"></span>
-					</button>
-				</div>
+			<div class="col-xs-4 col-md-4 col-sm-4"></div>
+			<div class="col-xs-4 col-md-4 col-sm-4">
+				<button type="button" class="btn btn-primary btn-block">Show/Hide
+					Table</button>
 			</div>
+			<div class="col-xs-4 col-md-4 col-sm-4"></div>
+		</div>
+		<br>
+		<div class="search1 row">
+			<div class="col-xs-3 col-md-3 col-sm-3"></div>
+			<div class="col-xs-6 col-md-6 col-sm-6">
+				<input class="form-control" type="text" ng-model="search"
+					placeholder="Search for keywords.." />
+			</div>
+			<div class="col-xs-3 col-md-3 col-sm-3"></div>
 		</div>
 		<br>
 		<div class="table-responsive">
 			<table class="table" ng-controller="myController">
-				<tr>
-					<th>Category Name</th>
-					<th>Category Description</th>
-					<th>Category Edit</th>
-					<th>Category Delete</th>
-				</tr>
-
-				<tr ng-repeat="cList in myscope | filter:search">
-					<td>{{cList.categoryName}}</td>
-					<td>{{cList.categoryDescription}}</td>
-					<td><a href="editCategory-{{cList.categoryId}}"
-						class="btn btn-primary" role="button">EDIT</a></td>
-					<td><a href="deleteCategory-{{cList.categoryId}}"
-						class="btn btn-warning" role="button">DELETE</a></td>
-				</tr>
+				<thead>
+					<tr>
+						<th class="text-center">Category Name</th>
+						<th class="text-center">Category Description</th>
+						<th class="text-center">Category Edit/Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="cList in myscope | filter:search">
+						<td>{{cList.categoryName}}</td>
+						<td>{{cList.categoryDescription}}</td>
+						<td><a href="editCategory-{{cList.categoryId}}"
+							class="btn btn-primary" role="button">EDIT</a>&nbsp&nbsp||&nbsp
+						<a href="deleteCategory-{{cList.categoryId}}"
+							class="btn btn-warning" role="button">DELETE</a></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</div>
-</div>
+	<br> <br>
 
-<a href="/LaptopWorld/" class="btn btn-primary" role="button">Return
-	to home</a>
+	<div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4"></div>
+		<div class="col-xs-4 col-md-4 col-sm-4">
+			<a href="/LaptopWorld/" class="btn btn-primary btn-block"
+				role="button">Return to home</a>
+		</div>
+		<div class="col-xs-4 col-md-4 col-sm-4"></div>
+	</div>
+</div>
 <br>
 
 <script>
-	var a = angular.module('myApp1', []);
+	var a = angular.module('myApp', []);
 	a.controller('myController', function($scope) {
 		$scope.myscope = ${categoryListByJson}
 	});
