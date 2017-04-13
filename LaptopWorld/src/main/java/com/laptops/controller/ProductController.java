@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.laptops.model.Product;
 import com.laptops.service.BrandService;
 import com.laptops.service.CategoryService;
@@ -135,4 +137,13 @@ public class ProductController {
 		return "redirect:/productPage";
 	}
 
+	@RequestMapping("/viewProduct-{productId}")
+	public String viewProduct(@PathVariable("productId") int productId, Model model)
+	{
+		Product p = productService.getProductById(productId);
+		Gson g = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+		String jsonView = g.toJson(p);
+		model.addAttribute("product", jsonView);
+		return "viewproduct";
+	}
 }

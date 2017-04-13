@@ -9,6 +9,11 @@ public class HomeController {
 	public String getHomePage() {
 		return "index";
 	}
+	
+	@RequestMapping("/home")
+	public String getHomePage1() {
+		return "index";
+	}
 
 	@RequestMapping("/aboutus")
 	public String getAboutUsPage() {

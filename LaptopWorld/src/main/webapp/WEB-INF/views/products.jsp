@@ -231,6 +231,7 @@ body {
 						<th>Product Image</th>
 						<th>Product Edit</th>
 						<th>Product Delete</th>
+						<th>Product View</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -240,11 +241,11 @@ body {
 						<td>{{pList.productActualPrice}}</td>
 						<td>{{pList.productDiscount}}</td>
 						<td>{{pList.productMadeCountry}}</td>
-						<td>{{pList.productStock}}</td>
+						<td>{{pList.productStock}}</td>						
 						<td>{{pList.category.categoryName}}</td>
 						<td>{{pList.subCategory.subCategoryName}}</td>
 						<td>{{pList.brand.brandName}}</td>
-						<td>{{pList.supplier.supplierName}}</td>
+						<td>{{pList.supplier.supplierName}}</td>	
 						<td><img
 							src="resources/productImages/productImage-{{pList.productId}}.jpg"
 							height="80px" width="80px" alt="img not uploaded" /></td>
@@ -252,6 +253,8 @@ body {
 							class="btn btn-primary" role="button">EDIT</a></td>
 						<td><a href="deleteProduct-{{pList.productId}}"
 							class="btn btn-warning" role="button">DELETE</a></td>
+						<td><a href="viewProduct-{{pList.productId}}"
+							class="btn btn-info" role="button">VIEW</a></td>
 					</tr>
 				</tbody>
 			</table>

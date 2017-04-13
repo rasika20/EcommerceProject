@@ -19,6 +19,7 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\UserController.ja
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\UserService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\BrandDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\ProductService.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\CartItems.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Category.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Supplier.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Cart.java

@@ -3,6 +3,7 @@ package com.laptops.controller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.validator.internal.util.IgnoreJava6Requirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -51,5 +52,11 @@ public class UserController {
 	public String getAdminPanelPage()
 	{
 		return "adminpanel";
+	}
+	
+	@RequestMapping("/403")
+	public String get403Page()
+	{
+		return "403";
 	}
 }

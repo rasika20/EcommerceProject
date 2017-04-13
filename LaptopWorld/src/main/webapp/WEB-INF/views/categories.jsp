@@ -106,7 +106,8 @@ body {
 		</div>
 		<br>
 		<div class="table-responsive">
-			<table class="table" ng-controller="myController">
+			<table class="table table-bordered table-striped table-hover"
+				ng-controller="myController">
 				<thead>
 					<tr>
 						<th class="text-center">Category Name</th>
@@ -119,8 +120,8 @@ body {
 						<td>{{cList.categoryName}}</td>
 						<td>{{cList.categoryDescription}}</td>
 						<td><a href="editCategory-{{cList.categoryId}}"
-							class="btn btn-primary" role="button">EDIT</a>&nbsp&nbsp||&nbsp
-						<a href="deleteCategory-{{cList.categoryId}}"
+							class="btn btn-primary" role="button">EDIT</a>&nbsp&nbsp||&nbsp <a
+							href="deleteCategory-{{cList.categoryId}}"
 							class="btn btn-warning" role="button">DELETE</a></td>
 					</tr>
 				</tbody>
@@ -132,7 +133,7 @@ body {
 	<div class="row">
 		<div class="col-xs-4 col-md-4 col-sm-4"></div>
 		<div class="col-xs-4 col-md-4 col-sm-4">
-			<a href="/LaptopWorld/" class="btn btn-primary btn-block"
+			<a href="home" class="btn btn-primary btn-block"
 				role="button">Return to home</a>
 		</div>
 		<div class="col-xs-4 col-md-4 col-sm-4"></div>

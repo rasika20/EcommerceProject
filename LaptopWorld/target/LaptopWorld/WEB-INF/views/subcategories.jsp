@@ -8,11 +8,26 @@ body {
 }
 </style>
 
+<script>
+	$(document).ready(function() {
+		$("tbody").hide();
+		$("button").click(function() {
+			$("tbody").toggle(500);
+		});
+	});
+	$(document).ready(function() {
+		$('.search1').hide();
+		$('button').click(function() {
+			$('.search1').toggle(500);
+		});
+	});
+</script>
+
 <div class="container">
-	
+
 	<div class="text-center">
 		<h1>
-			<u>Sub-Category Form</u>
+			<strong>Sub-Category Form</strong>
 		</h1>
 	</div>
 	<br>
@@ -47,11 +62,13 @@ body {
 			</div>
 			<br>
 			<div class="row">
-				<div class="col-xs-12 col-sm-4  col-md-4"> 
+				<div class="col-xs-12 col-sm-4  col-md-4">
 					<form:label path="categoryId">Select Category of SubCategory</form:label>
-				</div>	 
-				<div class="col-xs-12 col-sm-4  col-md-4">					
-					<form:select class="form-control" path="categoryId" items="${categoryList}" itemValue="categoryId" itemLabel="categoryName"/>
+				</div>
+				<div class="col-xs-12 col-sm-4  col-md-4">
+					<form:select class="form-control" path="categoryId"
+						items="${categoryList}" itemValue="categoryId"
+						itemLabel="categoryName" />
 				</div>
 			</div>
 			<br>
@@ -69,33 +86,79 @@ body {
 			</div>
 		</form:form>
 	</div>
+
+	<br>
+	<hr
+		style="height: 2px; border-width: 0; color: gray; background-color: gray">
+	<br>
+
+	<div ng-app="myApp">
+		<div class="text-center">
+			<h1>Sub-Category List</h1>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-4 col-md-4 col-sm-4"></div>
+			<div class="col-xs-4 col-md-4 col-sm-4">
+				<button type="button" class="btn btn-primary btn-block">Show/Hide
+					Table</button>
+			</div>
+			<div class="col-xs-4 col-md-4 col-sm-4"></div>
+		</div>
+		<br>
+		<div class="search1 row">
+			<div class="col-xs-3 col-md-3 col-sm-3"></div>
+			<div class="col-xs-6 col-md-6 col-sm-6">
+				<input class="form-control" type="text" ng-model="search"
+					placeholder="Search for keywords.." />
+			</div>
+			<div class="col-xs-3 col-md-3 col-sm-3"></div>
+		</div>
+		<br>
+
+		<div class="table-responsive">
+			<table class="table" ng-controller="myController">
+				<thead>
+					<tr>
+						<th>Sub-Category Name</th>
+						<th>Sub-Category Description</th>
+						<th>Category Name</th>
+						<th>Sub-Category Edit</th>
+						<th>Sub-Category Delete</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="scList in myscope | filter:search">
+						<td>{{scList.subCategoryName}}</td>
+						<td>{{scList.subCategoryDescription}}</td>
+						<td>{{scList.category.categoryName}}</td>
+						<td><a href="editSubCategory-{{scList.subCategoryId}}"
+							class="btn btn-primary" role="button">EDIT</a></td>
+						<td><a href="deleteSubCategory-{{scList.subCategoryId}}"
+							class="btn btn-warning" role="button">DELETE</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<br> <br>
+
+	<div class="row">
+		<div class="col-xs-4 col-md-4 col-sm-4"></div>
+		<div class="col-xs-4 col-md-4 col-sm-4">
+			<a href="/LaptopWorld/" class="btn btn-primary btn-block"
+				role="button">Return to home</a>
+		</div>
+		<div class="col-xs-4 col-md-4 col-sm-4"></div>
+	</div>
 </div>
 <br>
 
-<div class="table-responsive">
-	<table class="table">
-		<tr>
-			<th>Sub-Category Name</th>
-			<th>Sub-Category Description</th>
-			<th>Category Name</th>
-			<th>Sub-Category Edit</th>
-			<th>Sub-Category Delete</th>
-		</tr>
-		<c:forEach items="${subCategoryList}" var="scList">
-			<tr>
-				<td>${scList.subCategoryName}</td>
-				<td>${scList.subCategoryDescription}</td>
-				<td>${scList.category.categoryName}</td>
-				<td><a href="editSubCategory-${scList.subCategoryId}" class="btn btn-primary" role="button">EDIT</a></td>
-				<td><a href="deleteSubCategory-${scList.subCategoryId}" class="btn btn-warning" role="button">DELETE</a></td>
-			</tr>
-		</c:forEach>
-
-	</table>
-</div>
-
-
-<a href="/LaptopWorld/" class="btn btn-primary" role="button">Return to home</a>
-<br>
+<script>
+	var a = angular.module('myApp', []);
+	a.controller('myController', function($scope) {
+		$scope.myscope = ${subCategoryListByJson}
+	});
+</script>
 
 <%@ include file="footer.jsp"%>

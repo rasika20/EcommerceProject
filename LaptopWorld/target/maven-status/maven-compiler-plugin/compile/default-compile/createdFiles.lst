@@ -9,6 +9,7 @@ com\laptops\dao\BrandDAO.class
 com\laptops\daoimpl\SubCategoryDAOImpl.class
 com\laptops\service\SubCategoryService.class
 com\laptops\controller\UserController.class
+com\laptops\model\CartItems.class
 com\laptops\controller\SupplierController.class
 com\laptops\daoimpl\ProductDAOImpl.class
 com\laptops\daoimpl\CategoryDAOImpl.class

@@ -19,12 +19,19 @@
 
 	<!-- enable use-expressions -->
 	<http auto-config="true" use-expressions="true">
+	
+		<session-management>
+      		<concurrency-control max-sessions="1" error-if-maximum-exceeded="true" />
+		</session-management>
+		
+		
 
-		<intercept-url pattern="/categoryPage" access="hasRole('ROLE_ADMIN')" />
+		<!-- <intercept-url pattern="/categoryPage" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/subCategoryPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/brandPage" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/supplierPage" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/supplierPage" access="hasRole('ROLE_ADMIN')"/>
 		<intercept-url pattern="/productPage" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/logout" access="hasRole('ROLE_ADMIN, ROLE_USER')" /> -->
 
 		<!-- access denied page -->
 		<access-denied-handler error-page="/403" />
@@ -36,6 +43,7 @@
 					username-parameter="username" 
 					password-parameter="password" />
 			<logout logout-success-url="/?logout" />
+			
 		<!-- enable csrf protection -->
 		<csrf disabled="true" />
 	</http>

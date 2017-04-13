@@ -13,14 +13,15 @@ public class User {
 	private int userId;
 	private String username;
 	private String password;
-	private boolean enabled;
-	private String role;
-
+	
 	private String fname;
 	private String lname;
 	private String dob;
 	private String contactNo;
 	private String alternateContactNo;
+	
+	private boolean enabled;
+	private String role;
 
 	public int getUserId() {
 		return userId;
