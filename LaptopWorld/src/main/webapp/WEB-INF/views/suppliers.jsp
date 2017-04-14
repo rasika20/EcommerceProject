@@ -198,7 +198,7 @@ body {
 
 
 		<div class="table-responsive">
-			<table class="table" ng-controller="myController">
+			<table class="table table-bordered table-striped table-hover" ng-controller="myController">
 				<thead>
 					<tr>
 						<th>Supplier Name</th>

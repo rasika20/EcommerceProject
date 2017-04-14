@@ -1,5 +1,7 @@
 package com.laptops.daoimpl;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +33,11 @@ public class UserDAOImpl implements UserDAO {
 		session.saveOrUpdate(cart);
 		session.saveOrUpdate(user);
 
+	}
+
+	public User getIdByUser(String username) {
+
+		List<User> getList = sessionFactory.getCurrentSession().createQuery("from User where username = '" +username+"'").getResultList();
+		return getList.get(0);
 	}
 }

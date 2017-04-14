@@ -15,6 +15,12 @@ public class UserService {
 	private UserDAOImpl userDAOImpl;
 
 	public void addUser(User user) {
+		
 		userDAOImpl.addUser(user);
+	}
+
+	public User getIdByUser(String username) {
+		
+		return userDAOImpl.getIdByUser(username);
 	}
 }

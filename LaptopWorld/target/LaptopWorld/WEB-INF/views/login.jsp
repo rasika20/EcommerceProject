@@ -23,6 +23,7 @@ body {
 <link href="resources/css/set1.css" rel="stylesheet" />
 <link href="resources/css/login.css" rel="stylesheet" />
 <script src="resources/js/login.js"></script>
+<script src="resources/js/bootstrap-checkbox-.min.js"></script>
 
 
 

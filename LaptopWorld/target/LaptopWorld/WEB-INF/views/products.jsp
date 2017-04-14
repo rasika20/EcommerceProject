@@ -90,14 +90,14 @@ body {
 			<br>
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<form:label path="productMadeCountry">Enter Product Made Country</form:label>
+					<form:label path="productFinalPrice">Enter Product Final Price</form:label>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<form:input class="form-control" path="productMadeCountry"
-						placeholder="Product Made Country" />
+					<form:input class="form-control" path="productFinalPrice"
+						placeholder="Product Final Price" />
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<form:errors cssClass="error" path="productMadeCountry" />
+					<form:errors cssClass="error" path="productFinalPrice" />
 				</div>
 			</div>
 			<br>
@@ -111,6 +111,32 @@ body {
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<form:errors cssClass="error" path="productStock" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productReturnDays">Enter Product Return Days</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productReturnDays"
+						placeholder="Product Return Days" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productReturnDays" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productMadeCountry">Enter Product Made Country</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productMadeCountry"
+						placeholder="Product Final Price" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productMadeCountry" />
 				</div>
 			</div>
 			<br>
@@ -215,22 +241,23 @@ body {
 		<br>
 
 		<div class="table-responsive">
-			<table class="table" ng-controller="myController">
+			<table class="table table-bordered table-hover" ng-controller="myController">
 				<thead>
 					<tr>
 						<th>Product Name</th>
 						<th>Product Description</th>
 						<th>Product Actual Price</th>
 						<th>Product Discount</th>
-						<th>Product Made Country</th>
+						<th>Product Final Price</th>
 						<th>Product Stock</th>
+						<th>Product Return Days</th>
+						<th>Product Made Country</th>
 						<th>Category Name</th>
 						<th>Sub-Category Name</th>
 						<th>Brand Name</th>
 						<th>Supplier Name</th>
 						<th>Product Image</th>
-						<th>Product Edit</th>
-						<th>Product Delete</th>
+						<th>Product Edit/Delete/View</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -239,19 +266,24 @@ body {
 						<td>{{pList.productDescription}}</td>
 						<td>{{pList.productActualPrice}}</td>
 						<td>{{pList.productDiscount}}</td>
-						<td>{{pList.productMadeCountry}}</td>
+						<td>{{pList.productFinalPrice}}</td>
 						<td>{{pList.productStock}}</td>
+						<td>{{pList.productReturnDays}}</td>
+						<td>{{pList.productMadeCountry}}</td>						
 						<td>{{pList.category.categoryName}}</td>
 						<td>{{pList.subCategory.subCategoryName}}</td>
 						<td>{{pList.brand.brandName}}</td>
-						<td>{{pList.supplier.supplierName}}</td>
+						<td>{{pList.supplier.supplierName}}</td>	
 						<td><img
 							src="resources/productImages/productImage-{{pList.productId}}.jpg"
 							height="80px" width="80px" alt="img not uploaded" /></td>
 						<td><a href="editProduct-{{pList.productId}}"
-							class="btn btn-primary" role="button">EDIT</a></td>
-						<td><a href="deleteProduct-{{pList.productId}}"
-							class="btn btn-warning" role="button">DELETE</a></td>
+							class="btn btn-primary" role="button">EDIT</a>
+							<a href="deleteProduct-{{pList.productId}}"
+							class="btn btn-warning" role="button">DELETE</a>
+							<a href="vireProduct-{{pList.productId}}"
+							class="btn btn-info	" role="button">VIEW</a></td>
+							
 					</tr>
 				</tbody>
 			</table>

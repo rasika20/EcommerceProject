@@ -3,14 +3,26 @@
 
 <%@ include file="slider.jsp"%>
 
+<br>
+<br>
+<div ng-app="myApp" ng-controller="myController" >
 
-<h2>Hello World index jsp!</h2>
-<br>
-<a href="#myModal" class="btn btn-primary" data-toggle="modal">
-	Launch Demo Modal</a>
-<br>
-<br>
-<a href="productPage" class="btn btn-primary" >Product Page</a>
-<br>
+<div class="row" ng-repeat="p in myscope" style="border: 3px solid black; margin-bottom: 10px; 
+		margin-left: 10px; margin-right: 10px;">
+	<div class="col-md-3" >
+		<img src="resources/productImages/productImage-{{p.productId}}.jpg"
+			height="210px" width="270px" alt="img not uploaded" />
+	</div>	
+		<div class="col-md-9" >
+			{{p.productName}}
+		</div>
+	</div>
+</div>
+<script>
+	var a = angular.module('myApp', []);
+	a.controller('myController', function($scope) {
+		$scope.myscope = ${products}
+	});
+</script>
 
 <%@ include file="footer.jsp"%>

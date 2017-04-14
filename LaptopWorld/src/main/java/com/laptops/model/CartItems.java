@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import org.apache.commons.io.filefilter.FalseFileFilter;
+
 import com.google.gson.annotations.Expose;
 
 @Entity
@@ -17,6 +19,10 @@ public class CartItems {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cartItemId;
 	
+	private int cartId;
+	private int userId;
+	private int productId;
+	
 	@Expose
 	@ManyToOne
 	@JoinColumn(name = "cartId", nullable = false, updatable = false, insertable = false)
@@ -24,11 +30,17 @@ public class CartItems {
 
 	@Expose
 	@ManyToOne
+	@JoinColumn(name = "userId", nullable = false, updatable = false, insertable = false)
+	private User user;
+	
+	@Expose
+	@ManyToOne
 	@JoinColumn(name = "productId", nullable = false, updatable = false, insertable = false)
 	private Product product;
 	
 	private int cartItemQuantity;
-	private int amount;
+	private double amount;
+	
 	
 	
 	public int getCartItemId() {
@@ -37,11 +49,35 @@ public class CartItems {
 	public void setCartItemId(int cartItemId) {
 		this.cartItemId = cartItemId;
 	}
+	public int getCartId() {
+		return cartId;
+	}
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
 	public Cart getCart() {
 		return cart;
 	}
 	public void setCart(Cart cart) {
 		this.cart = cart;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
 	}
 	public Product getProduct() {
 		return product;
@@ -55,11 +91,15 @@ public class CartItems {
 	public void setCartItemQuantity(int cartItemQuantity) {
 		this.cartItemQuantity = cartItemQuantity;
 	}
-	public int getAmount() {
+	public double getAmount() {
 		return amount;
 	}
-	public void setAmount(int amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+	
+	
+	
+	
 
 }

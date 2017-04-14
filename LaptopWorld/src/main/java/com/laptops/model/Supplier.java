@@ -8,6 +8,8 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 public class Supplier {
 
@@ -15,6 +17,7 @@ public class Supplier {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int supplierId;
 
+	@Expose
 	@NotEmpty(message = "Supplier Name cannot be Empty")
 	private String supplierName;
 

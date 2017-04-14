@@ -117,7 +117,8 @@ body {
 		<br>
 
 		<div class="table-responsive">
-			<table class="table" ng-controller="myController">
+			<table class="table table-bordered table-striped table-hover"
+				ng-controller="myController">
 				<thead>
 					<tr>
 						<th>Sub-Category Name</th>
@@ -157,7 +158,10 @@ body {
 <script>
 	var a = angular.module('myApp', []);
 	a.controller('myController', function($scope) {
-		$scope.myscope = ${subCategoryListByJson}
+		$scope.myscope = $
+		{
+			subCategoryListByJson
+		}
 	});
 </script>
 

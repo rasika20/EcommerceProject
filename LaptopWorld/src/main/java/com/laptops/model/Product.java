@@ -36,13 +36,19 @@ public class Product {
 
 	@Expose
 	private double productDiscount;
-
+	
 	@Expose
-	@NotEmpty(message = "Product Made Country cannot be Empty")
-	private String productMadeCountry;
+	private double productFinalPrice;
 
 	@Expose
 	private int productStock;
+	
+	@Expose
+	private int productReturnDays;
+	
+	@Expose
+	@NotEmpty(message = "Product Made Country cannot be Empty")
+	private String productMadeCountry;
 
 	@Expose
 	private int categoryId;
@@ -119,12 +125,12 @@ public class Product {
 		this.productDiscount = productDiscount;
 	}
 
-	public String getProductMadeCountry() {
-		return productMadeCountry;
+	public double getProductFinalPrice() {
+		return productFinalPrice;
 	}
 
-	public void setProductMadeCountry(String productMadeCountry) {
-		this.productMadeCountry = productMadeCountry;
+	public void setProductFinalPrice(double productFinalPrice) {
+		this.productFinalPrice = productFinalPrice;
 	}
 
 	public int getProductStock() {
@@ -133,6 +139,22 @@ public class Product {
 
 	public void setProductStock(int productStock) {
 		this.productStock = productStock;
+	}
+
+	public int getProductReturnDays() {
+		return productReturnDays;
+	}
+
+	public void setProductReturnDays(int productReturnDays) {
+		this.productReturnDays = productReturnDays;
+	}
+
+	public String getProductMadeCountry() {
+		return productMadeCountry;
+	}
+
+	public void setProductMadeCountry(String productMadeCountry) {
+		this.productMadeCountry = productMadeCountry;
 	}
 
 	public int getCategoryId() {
@@ -207,4 +229,5 @@ public class Product {
 		this.productImage = productImage;
 	}
 
+	
 }

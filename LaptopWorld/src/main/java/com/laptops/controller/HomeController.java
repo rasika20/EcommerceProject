@@ -1,12 +1,21 @@
 package com.laptops.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.laptops.service.ProductService;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	private ProductService productService;
+	
 	@RequestMapping("/")
-	public String getHomePage() {
+	public String getHomePage(Model model) {
+		model.addAttribute("products", productService.fetchAllProductByJson());
 		return "index";
 	}
 	
