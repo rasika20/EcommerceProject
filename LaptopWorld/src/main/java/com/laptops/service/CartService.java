@@ -15,7 +15,12 @@ public class CartService {
 	private CartDAOImpl cartDAOImpl;
 
 	public void addToCart(CartItems cartItems) {
-		
+
 		cartDAOImpl.addToCart(cartItems);
+	}
+
+	public String displayCart(int userId) {
+
+		return cartDAOImpl.displayCart(userId);
 	}
 }

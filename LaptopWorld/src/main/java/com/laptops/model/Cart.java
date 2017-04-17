@@ -5,13 +5,19 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
+import com.google.gson.annotations.Expose;
+
 @Entity
 public class Cart {
-
+	
+	@Expose
 	@Id
 	private int cartId;
+	
+	@Expose
 	private int userId;
 
+	@Expose
 	@OneToOne
 	@JoinColumn(name = "userId", insertable = false, nullable = false, updatable = false)
 	public User user;

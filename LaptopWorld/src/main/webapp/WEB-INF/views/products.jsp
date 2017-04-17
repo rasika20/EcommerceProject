@@ -41,7 +41,7 @@ body {
 					<form:label path="productName">Enter Product Name</form:label>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<form:input class="form-control" path="productName"
+					<form:textarea class="form-control" path="productName"
 						placeholder="Product Name" autofocus="true" />
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
@@ -54,7 +54,7 @@ body {
 					<form:label path="productDescription">Enter Product Description</form:label>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<form:input class="form-control" path="productDescription"
+					<form:textarea class="form-control" path="productDescription"
 						placeholder="Product Description" />
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">

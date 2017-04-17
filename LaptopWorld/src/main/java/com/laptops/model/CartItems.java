@@ -19,8 +19,13 @@ public class CartItems {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cartItemId;
 	
+	@Expose
 	private int cartId;
+	
+	@Expose
 	private int userId;
+	
+	@Expose
 	private int productId;
 	
 	@Expose
@@ -38,7 +43,10 @@ public class CartItems {
 	@JoinColumn(name = "productId", nullable = false, updatable = false, insertable = false)
 	private Product product;
 	
+	@Expose
 	private int cartItemQuantity;
+	
+	@Expose
 	private double amount;
 	
 	

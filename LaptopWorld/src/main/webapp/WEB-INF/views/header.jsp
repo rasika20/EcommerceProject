@@ -38,8 +38,8 @@
 
 <style type="text/css">
 body {
-	background-image: url("resources/backgroundImages/background.jpg");
-	background-repeat: repeat;
+	/* background-image: url("resources/backgroundImages/background.jpg");
+	background-repeat: repeat; */
 	padding-top: 140px;
 }
 </style>
@@ -109,7 +109,7 @@ body {
 
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -191,7 +191,7 @@ body {
 						</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">Profile</a></li>
-								<li><a href="#">Cart</a></li>
+								<li><a href="displayCart">Cart</a></li>
 								<li><a href="#">Wish List</a></li>
 								<li><a href="#">Recent Orders</a></li>
 								<li class="divider"></li>
