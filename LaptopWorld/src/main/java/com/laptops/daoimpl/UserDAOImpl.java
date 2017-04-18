@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.laptops.dao.UserDAO;
 import com.laptops.model.Cart;
 import com.laptops.model.User;
+import com.laptops.model.WishList;
 
 @Repository
 public class UserDAOImpl implements UserDAO {
@@ -29,8 +30,15 @@ public class UserDAOImpl implements UserDAO {
 		Cart cart = new Cart();
 		cart.setCartId(user.getUserId());
 		cart.setUserId(user.getUserId());
-
+		
 		session.saveOrUpdate(cart);
+		session.saveOrUpdate(user);
+		
+		WishList wishList = new WishList();
+		wishList.setWishListId(user.getUserId());
+		wishList.setUserId(user.getUserId());
+
+		session.saveOrUpdate(wishList);
 		session.saveOrUpdate(user);
 
 	}

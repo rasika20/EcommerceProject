@@ -7,29 +7,25 @@ body {
 </style>
 
 <div class="container">
-	<div ng-app="myApp" ng-controller="myController">
+	<div ng-app="myApp">
 		<div class="table-responsive">
-			<table class="table">
+			<table class="table" ng-controller="myController">
 				<tr>
 					<td>Product ID</td>
 					<td>Product Image</td>
 					<td>Decide</td>
 					<td>abcd</td>
 				</tr>
-				<tr ng-repeat="ciList in myscope">
-					<td>{{ciList.productId}}</td>
-					<td><img src="resources/productImages/productImage-{{ciList.productId}}.jpg" 
+				<tr ng-repeat="wliList in myscope">
+					<td>{{wliList.productId}}</td>
+					<td><img src="resources/productImages/productImage-{{wliList.productId}}.jpg" 
 						height="210" width="280" /></td>
-					<td><a href="addToWishListFromCart-{{ciList.productId}}" class="btn btn-warning">Add To WishList</a>
+					<td><a href="addToCartFromWishList-{{wliList.productId}}" class="btn btn-warning">Add To Cart</a>
 						<a href="#" class="btn btn-danger">Buy Now</a></td>
-					<td><a href="deleteFromCart-{{ciList.cartItemId}}" class="btn close" 
+					<td><a href="deleteFromWishList-{{wliList.wishListItemId}}" class="btn close" 
 						style="margin-right: 20px;">&times;</a></td>
 				</tr>
 			</table>
-			<br>
-			<div ng-if="myscope.length != 0">
-				<a href="#" class="btn btn-warning btn-block"> CheckOut </a>
-			</div>
 		</div>
 	</div>
 </div>
@@ -37,7 +33,7 @@ body {
 <script>
 	var a = angular.module('myApp', []);
 	a.controller('myController', function($scope) {
-		$scope.myscope = ${citems}
+		$scope.myscope = ${wlitems}
 	});
 </script>
 

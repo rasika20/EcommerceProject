@@ -31,4 +31,11 @@ public class CartDAOImpl implements CartDAO {
 		return jsonList;
 	}
 
+	public void deteleFromCart(int cartItemId) {
+		
+		CartItems cartItems = new CartItems();
+		cartItems.setCartItemId(cartItemId);
+		sessionfactory.getCurrentSession().delete(cartItems);
+	}
+
 }

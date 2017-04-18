@@ -192,7 +192,7 @@ body {
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">Profile</a></li>
 								<li><a href="displayCart">Cart</a></li>
-								<li><a href="#">Wish List</a></li>
+								<li><a href="displayWishList">Wish List</a></li>
 								<li><a href="#">Recent Orders</a></li>
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span

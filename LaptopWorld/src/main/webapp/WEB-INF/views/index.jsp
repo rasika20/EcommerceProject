@@ -25,8 +25,9 @@
 		<div class="col-md-9" style="padding-bottom: 10px;">
 			<pre class="preclass">{{p.productName}}</pre>
 			<br>
-			<a href="addToCart-{{p.productId}}" class="btn btn-success ">Add To Cart</a>
-			<a href="#" class="btn btn-warning">Add To WishList</a>
+			<a href="viewProduct-{{p.productId}}" class="btn btn-info">View Product</a>
+			<a href="addToCartFromHome-{{p.productId}}" class="btn btn-success ">Add To Cart</a>
+			<a href="addToWishListFromHome-{{p.productId}}" class="btn btn-warning">Add To WishList</a>
 			<a href="#" class="btn btn-danger">Buy Now</a>
 		</div>
 	</div>

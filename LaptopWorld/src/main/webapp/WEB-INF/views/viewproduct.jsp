@@ -12,7 +12,8 @@ View product page
 {{myscope.productDescription}}
 <br>
 <br>
-<a href="/addToCart-{productId}" class="btn btn-primary" >Add to Cart</a>
+<a href="addToCartFromProduct-{{myscope.productId}}" class="btn btn-warning" >Add to Cart</a>
+<a href="addToWishListFromProduct-{{myscope.productId}}" class="btn btn-danger" >Add to WishList</a>
 
 </div>
 

@@ -23,4 +23,9 @@ public class CartService {
 
 		return cartDAOImpl.displayCart(userId);
 	}
+
+	public void deleteFromCart(int cartItemId) {
+
+		cartDAOImpl.deteleFromCart(cartItemId);
+	}
 }
