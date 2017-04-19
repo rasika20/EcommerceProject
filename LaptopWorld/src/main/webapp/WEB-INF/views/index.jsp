@@ -3,35 +3,63 @@
 
 <%@ include file="slider.jsp"%>
 
-<style>
-.preclass {
-    background-color: white;
-    border-color: white;
-    font-family: serif;
-    font-size: 16px;
-} 
-</style>
+<br>
+<br>
+<br>
 
-<br>
-<br>
 <div ng-app="myApp" ng-controller="myController" >
-
-<div class="row" ng-repeat="p in myscope" style="margin-bottom: 20px; 
-		margin-left: 20px; margin-right: 20px; margin-top: 20px; ">
-	<div class="col-md-3" style="padding-top: 10px; padding-bottom: 10px" >
-		<img src="resources/productImages/productImage-{{p.productId}}.jpg"
-			height="200px" width="260px" alt="img not uploaded" />
-	</div>	
-		<div class="col-md-9" style="padding-bottom: 10px;">
-			<pre class="preclass">{{p.productName}}</pre>
-			<br>
-			<a href="viewProduct-{{p.productId}}" class="btn btn-info">View Product</a>
-			<a href="addToCartFromHome-{{p.productId}}" class="btn btn-success ">Add To Cart</a>
-			<a href="addToWishListFromHome-{{p.productId}}" class="btn btn-warning">Add To WishList</a>
-			<a href="#" class="btn btn-danger">Buy Now</a>
+	<div class="row">
+		<div ng-repeat="p in myscope">
+			<div class="col-md-4 text-center" style="border: 1px solid black;
+				border-radius: 15px; height: 480px; width: 320px; padding-top: 20px;
+				padding-bottom: 10px; margin-left: 100px; margin-bottom: 20px; ">	
+				<a href="viewProduct-{{p.productId}}" style="text-decoration: none!important">
+					<img src="resources/productImages/productImage-{{p.productId}}.jpg"
+						alt="{{p.productName}}" height="150" width="200" >
+				</a>
+				<br>
+				<pre>{{p.productName}}</pre>
+				
+				<div style="background-color: orange; font-size: 25px;">
+					&#8377;{{p.productFinalPrice}}
+				</div>
+				<hr>
+				<div class="tooltipleft">
+				
+					<a href="addToCartFromHome-{{p.productId}}"
+						style="text-decoration: none!important" >
+						<span class="fa fa-cart-plus" style="font-size: 40px; margin-left: 20px;
+							margin-right: 10px; color: orange; "></span>
+					</a>
+					<span class="tooltiptextleft">Add to<br>Cart</span>
+				</div>
+				<div class="tooltipright">
+					<a href="addToWishListFromHome-{{p.productId}}"
+						style="text-decoration: none!important" >
+						<i class="fa fa-heart" style="font-size: 40px; margin-left: 10px;
+							margin-right: 20px; color: red;" ></i>
+					</a>
+					<span class="tooltiptextright">Add to<br>WishList</span>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<a href="#" class="btn btn-warning btn-block">
+							Buy Now
+						</a>
+					</div>
+					<div class="col-md-1"></div>
+				</div>
+				
+			</div>
 		</div>
 	</div>
 </div>
+
+
+
+
 <script>
 	var a = angular.module('myApp', []);
 	a.controller('myController', function($scope) {

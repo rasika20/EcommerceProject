@@ -2,6 +2,7 @@ package com.laptops.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,9 +27,10 @@ public class Product {
 	@Expose
 	@NotEmpty(message = "Product Name cannot be Empty")
 	private String productName;
-
+	
 	@Expose
 	@NotEmpty(message = "Product Description cannot be Empty")
+	@Column(columnDefinition = "CLOB")
 	private String productDescription;
 
 	@Expose

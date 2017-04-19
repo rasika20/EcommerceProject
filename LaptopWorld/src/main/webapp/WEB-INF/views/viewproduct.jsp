@@ -7,9 +7,9 @@ View product page
 <img src="resources/productImages/productImage-{{myscope.productId}}.jpg"
 			height="300px" width="400px" alt="img not uploaded" />
 <br>
-{{myscope.productName}}
+<pre>{{myscope.productName}}</pre>
 <br>
-{{myscope.productDescription}}
+<pre>{{myscope.productDescription}}</pre>
 <br>
 <br>
 <a href="addToCartFromProduct-{{myscope.productId}}" class="btn btn-warning" >Add to Cart</a>
