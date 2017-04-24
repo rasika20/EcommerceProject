@@ -133,10 +133,23 @@ body {
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<form:input class="form-control" path="productMadeCountry"
-						placeholder="Product Final Price" />
+						placeholder="Product Made Country" />
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<form:errors cssClass="error" path="productMadeCountry" />
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:label path="productDisplayHome">Product Display Home</form:label>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:input class="form-control" path="productDisplayHome"
+						placeholder="Product Display Home (Y/N)" />
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<form:errors cssClass="error" path="productDisplayHome" />
 				</div>
 			</div>
 			<br>
@@ -252,6 +265,7 @@ body {
 						<th>Product Stock</th>
 						<th>Product Return Days</th>
 						<th>Product Made Country</th>
+						<th>Product Display Home</th>
 						<th>Category Name</th>
 						<th>Sub-Category Name</th>
 						<th>Brand Name</th>
@@ -269,7 +283,8 @@ body {
 						<td>{{pList.productFinalPrice}}</td>
 						<td>{{pList.productStock}}</td>
 						<td>{{pList.productReturnDays}}</td>
-						<td>{{pList.productMadeCountry}}</td>						
+						<td>{{pList.productMadeCountry}}</td>
+						<td>{{pList.productDisplayHome}}</td>
 						<td>{{pList.category.categoryName}}</td>
 						<td>{{pList.subCategory.subCategoryName}}</td>
 						<td>{{pList.brand.brandName}}</td>

@@ -21,11 +21,11 @@
 				<pre>{{p.productName}}</pre>
 				
 				<div style="background-color: orange; font-size: 25px;">
-					&#8377;{{p.productFinalPrice}}
+					&#8377;{{p.productFinalPrice}}&nbsp;&nbsp;
+					<small><del>{{p.productActualPrice}}</del></small>
 				</div>
 				<hr>
 				<div class="tooltipleft">
-				
 					<a href="addToCartFromHome-{{p.productId}}"
 						style="text-decoration: none!important" >
 						<span class="fa fa-cart-plus" style="font-size: 40px; margin-left: 20px;

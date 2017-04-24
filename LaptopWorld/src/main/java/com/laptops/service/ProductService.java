@@ -36,4 +36,8 @@ public class ProductService {
 		productDAOImpl.deleteProduct(productId);
 	}
 	
+	public String fetchFlagProductByJson() {
+		return productDAOImpl.fetchFlagProductByJson();
+	}
+	
 }

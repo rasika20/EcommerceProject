@@ -13,6 +13,7 @@ body {
 				<tr>
 					<td>Product ID</td>
 					<td>Product Image</td>
+					<td>Product Quantity</td>
 					<td>Decide</td>
 					<td>abcd</td>
 				</tr>
@@ -20,6 +21,7 @@ body {
 					<td>{{ciList.productId}}</td>
 					<td><img src="resources/productImages/productImage-{{ciList.productId}}.jpg" 
 						height="210" width="280" /></td>
+					<td><input type="number" value="1" min="1" max="10"></td>
 					<td><a href="addToWishListFromCart-{{ciList.productId}}" class="btn btn-warning">Add To WishList</a>
 						<a href="#" class="btn btn-danger">Buy Now</a></td>
 					<td><a href="deleteFromCart-{{ciList.cartItemId}}" class="btn close" 

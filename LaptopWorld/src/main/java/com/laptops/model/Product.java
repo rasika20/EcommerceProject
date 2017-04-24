@@ -53,6 +53,10 @@ public class Product {
 	private String productMadeCountry;
 
 	@Expose
+	@NotEmpty(message = "Product Display Home cannot be Empty")
+	private String productDisplayHome;
+	
+	@Expose
 	private int categoryId;
 
 	@Expose
@@ -87,6 +91,8 @@ public class Product {
 	@Transient
 	private List<MultipartFile> productImage;
 
+	
+	
 	public int getProductId() {
 		return productId;
 	}
@@ -157,6 +163,14 @@ public class Product {
 
 	public void setProductMadeCountry(String productMadeCountry) {
 		this.productMadeCountry = productMadeCountry;
+	}
+
+	public String getProductDisplayHome() {
+		return productDisplayHome;
+	}
+
+	public void setProductDisplayHome(String productDisplayHome) {
+		this.productDisplayHome = productDisplayHome;
 	}
 
 	public int getCategoryId() {

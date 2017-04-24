@@ -32,6 +32,13 @@ public class ProductDAOImpl implements ProductDAO {
 		String list = g.toJson(getList);		
 		return list;
 	}
+	
+	public String fetchFlagProductByJson() {
+		List<Product> getList = sessionFactory.getCurrentSession().createQuery("from Product where productDisplayHome = 'Y'").getResultList();
+		Gson g = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+		String list = g.toJson(getList);
+		return list;
+	}
 
 	public Product getProductById(int productId) {
 		List<Product> getList = sessionFactory.getCurrentSession().createQuery("from Product where productId = "+productId).getResultList();

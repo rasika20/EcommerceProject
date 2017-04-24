@@ -15,7 +15,7 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String getHomePage(Model model) {
-		model.addAttribute("products", productService.fetchAllProductByJson());
+		model.addAttribute("products", productService.fetchFlagProductByJson());
 		return "index";
 	}
 	

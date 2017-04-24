@@ -11,8 +11,12 @@ public interface ProductDAO {
 	public List<Product> fetchAllProduct();
 
 	public String fetchAllProductByJson();
+	
+	public String fetchFlagProductByJson();
 
 	public Product getProductById(int productId);
 
 	public void deleteProduct(int productId);
+	
+	public 
 }
