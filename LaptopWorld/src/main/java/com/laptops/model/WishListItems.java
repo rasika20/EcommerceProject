@@ -41,8 +41,17 @@ public class WishListItems {
 	@JoinColumn(name="productId", nullable = false, updatable = false, insertable = false)
 	private Product product;
 
-	private double amount;
+	@Expose
+	private String productName;
+	
+	@Expose
+	private double newAmount;
 
+	@Expose
+	private double oldAmount;
+
+	
+	
 	public int getWishListItemId() {
 		return wishListItemId;
 	}
@@ -99,13 +108,30 @@ public class WishListItems {
 		this.product = product;
 	}
 
-	public double getAmount() {
-		return amount;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setAmount(double amount) {
-		this.amount = amount;
+	public void setProductName(String productName) {
+		this.productName = productName;
 	}
+
+	public double getNewAmount() {
+		return newAmount;
+	}
+
+	public void setNewAmount(double newAmount) {
+		this.newAmount = newAmount;
+	}
+
+	public double getOldAmount() {
+		return oldAmount;
+	}
+
+	public void setOldAmount(double oldAmount) {
+		this.oldAmount = oldAmount;
+	}
+	
 	
 	
 }

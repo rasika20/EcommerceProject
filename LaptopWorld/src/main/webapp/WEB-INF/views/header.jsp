@@ -21,20 +21,20 @@
 <link href="resources/css/navbar.css" rel="stylesheet" />
 <link href="resources/css/build.css" rel="stylesheet" />
 <link href="resources/css/body.css" rel="stylesheet" />
-<link href="resources/css/quantity.css" rel="stylesheet" />
-<!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet"
-	media="all" />
-<link href="resources/css/scroller.css" rel="stylesheet" /> -->
+
+<!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet" media="all" /> -->
+<!-- <link href="resources/css/scroller.css" rel="stylesheet" /> -->
+
 <script src="resources/js/jquery-3.2.0.min.js"></script>
 <script src="resources/js/angular.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/backtotop.js"></script>
 
-<!-- <script src="resources/js/jquery.mousewheel.js"></script>
-<script src="resources/js/mwheelIntent.js"></script>
-<script src="resources/js/jquery.jscrollpane.min.js"></script>
-<script src="resources/js/scrollpane.js"></script>
-<script src="resources/js/scroller.js"></script> -->
+<!-- <script src="resources/js/jquery.mousewheel.js"></script> -->
+<!-- <script src="resources/js/mwheelIntent.js"></script> -->
+<!-- <script src="resources/js/jquery.jscrollpane.min.js"></script> -->
+<!-- <script src="resources/js/scrollpane.js"></script> -->
+<!-- <script src="resources/js/scroller.js"></script> -->
 
 
 <title>Laptop World</title>

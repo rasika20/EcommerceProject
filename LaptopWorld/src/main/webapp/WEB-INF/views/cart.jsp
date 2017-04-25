@@ -4,34 +4,62 @@
 body {
 	padding-top: 140px;
 }
+.pre1 {
+	background-color: white;
+	border-color: white;
+	font-family: serif;
+	font-size: 20px;
+}
 </style>
 
 <div class="container">
 	<div ng-app="myApp" ng-controller="myController">
-		<div class="table-responsive">
-			<table class="table">
-				<tr>
-					<td>Product ID</td>
-					<td>Product Image</td>
-					<td>Product Quantity</td>
-					<td>Decide</td>
-					<td>abcd</td>
-				</tr>
-				<tr ng-repeat="ciList in myscope">
-					<td>{{ciList.productId}}</td>
-					<td><img src="resources/productImages/productImage-{{ciList.productId}}.jpg" 
-						height="210" width="280" /></td>
-					<td><input type="number" value="1" min="1" max="10"></td>
-					<td><a href="addToWishListFromCart-{{ciList.productId}}" class="btn btn-warning">Add To WishList</a>
-						<a href="#" class="btn btn-danger">Buy Now</a></td>
-					<td><a href="deleteFromCart-{{ciList.cartItemId}}" class="btn close" 
-						style="margin-right: 20px;">&times;</a></td>
-				</tr>
-			</table>
-			<br>
-			<div ng-if="myscope.length != 0">
-				<a href="#" class="btn btn-warning btn-block"> CheckOut </a>
+		<div ng-repeat="ciList in myscope">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="resources/productImages/productImage-{{ciList.productId}}.jpg" 
+						height="150" width="200" />
+				</div>
+				<div class="col-md-4">
+					<pre class="pre1"><strong>{{ciList.productName}}</strong></pre>
+				</div>
+				<div class="col-md-1" style="font-size: 20px;">
+					<strong>&#8377;{{ciList.newAmount}}</strong>
+					<br><br><br>
+					<del><small>&#8377;{{ciList.oldAmount}}</small></del>
+				</div>
+				<div class="col-md-1">
+					<input type="number" value="{{ciList.cartItemQuantity}}" min="1" max="10" />
+				</div>
+				<div class="col-md-2">
+				
+				</div>
+				<div class="col-md-1 text-right">
+					<div class="tooltipright">
+						<a href="deleteFromCart-{{ciList.cartItemId}}" class="btn close" 
+							style="margin-right: 20px;">&times;
+						</a>
+						<span class="tooltiptextright">Remove<br>From Cart</span>
+					</div>
+					<br>
+					<br>
+					<br>
+					<div class="tooltipright">
+						<a href="addToWishListFromCart-{{ciList.productId}}"
+							style="text-decoration: none!important" >
+							<i class="fa fa-heart" style="font-size: 20px; color: orange;
+								margin-right: 33px" ></i>
+						</a>
+						<span class="tooltiptextright">Add to<br>WishList</span>
+					</div>
+				</div>
 			</div>
+			<hr>
+		</div>
+		<br>
+		<div ng-if="myscope.length != 0">
+			<a href="#" class="btn btn-warning pull-right"
+				style="height: 40px; width: 200px; padding-top: 10px;"> CheckOut </a>
 		</div>
 	</div>
 </div>

@@ -12,7 +12,7 @@ pre {
 
 .tooltipright .tooltiptextright {
 	visibility: hidden;
-	width: 120px;
+	width: 90px;
 	background-color: black;
 	color: #fff;
 	text-align: center;
@@ -46,7 +46,7 @@ pre {
 
 .tooltipleft .tooltiptextleft {
     visibility: hidden;
-    width: 120px;
+    width: 90px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -68,6 +68,13 @@ pre {
     border-style: solid;
     border-color: transparent transparent transparent black;
 }
+
 .tooltipleft:hover .tooltiptextleft {
     visibility: visible;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -38,7 +38,9 @@ public class WishListController {
 		wishListItems.setWishListId(u);
 		wishListItems.setUserId(u);
 		wishListItems.setProductId(productService.getProductById(productId).getProductId());
-		wishListItems.setAmount(productService.getProductById(productId).getProductFinalPrice());
+		wishListItems.setProductName(productService.getProductById(productId).getProductName());
+		wishListItems.setOldAmount(productService.getProductById(productId).getProductActualPrice());
+		wishListItems.setNewAmount(productService.getProductById(productId).getProductFinalPrice());
 		wishListService.addToWishList(wishListItems);
 		return "redirect:/";
 	}
@@ -53,7 +55,9 @@ public class WishListController {
 		wishListItems.setWishListId(u);
 		wishListItems.setUserId(u);
 		wishListItems.setProductId(productService.getProductById(productId).getProductId());
-		wishListItems.setAmount(productService.getProductById(productId).getProductFinalPrice());
+		wishListItems.setProductName(productService.getProductById(productId).getProductName());
+		wishListItems.setOldAmount(productService.getProductById(productId).getProductActualPrice());
+		wishListItems.setNewAmount(productService.getProductById(productId).getProductFinalPrice());
 		wishListService.addToWishList(wishListItems);
 		return "redirect:/displayCart";
 	}
@@ -68,7 +72,9 @@ public class WishListController {
 		wishListItems.setWishListId(u);
 		wishListItems.setUserId(u);
 		wishListItems.setProductId(productService.getProductById(productId).getProductId());
-		wishListItems.setAmount(productService.getProductById(productId).getProductFinalPrice());
+		wishListItems.setProductName(productService.getProductById(productId).getProductName());
+		wishListItems.setOldAmount(productService.getProductById(productId).getProductActualPrice());
+		wishListItems.setNewAmount(productService.getProductById(productId).getProductFinalPrice());
 		wishListService.addToWishList(wishListItems);
 		return "redirect:/viewProduct-{productId}";
 	}
