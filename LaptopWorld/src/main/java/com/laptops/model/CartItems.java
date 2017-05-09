@@ -52,6 +52,9 @@ public class CartItems {
 
 	@Expose
 	private double newAmount;
+	
+	@Expose
+	private double cartTotalAmount;
 
 	
 	
@@ -142,6 +145,14 @@ public class CartItems {
 	public void setNewAmount(double newAmount) {
 		this.newAmount = newAmount;
 	}
-	
-	
+
+	public double getCartTotalAmount() {
+		return cartTotalAmount;
+	}
+
+	public void setCartTotalAmount(double cartTotalAmount) {
+		this.cartTotalAmount = cartTotalAmount;
+	}
+
+		
 }

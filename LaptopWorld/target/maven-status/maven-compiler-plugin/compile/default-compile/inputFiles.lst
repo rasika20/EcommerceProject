@@ -1,3 +1,5 @@
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\WishListDAOImpl.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\WishListService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\ProductDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\User.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Brand.java
@@ -7,6 +9,7 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Product.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\SupplierDAIOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\UserDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\ProductDAO.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\CartDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\SubCategoryService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\SubCategoryController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\CategoryService.java
@@ -15,10 +18,15 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\CategoryControlle
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\ProductController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\SupplierService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\CategoryDAOImpl.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\WishList.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\CartController.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\WishListController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\UserController.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\CartDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\UserService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\BrandDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\ProductService.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\WishListDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\CartItems.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Category.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Supplier.java
@@ -28,6 +36,8 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\SupplierControlle
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\BrandDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\BrandService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\CategoryDAO.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\WishListItems.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\BrandController.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\CartService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\SupplierDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\SubCategory.java

@@ -4,12 +4,16 @@
 
 View product page
 <br><br><br>
-{{myscope.productId}}
+<img src="resources/productImages/productImage-{{myscope.productId}}.jpg"
+			height="300px" width="400px" alt="img not uploaded" />
 <br>
-{{myscope.productName}}
+<pre>{{myscope.productName}}</pre>
+<br>
+<pre>{{myscope.productDescription}}</pre>
 <br>
 <br>
-<a href="#" class="btn btn-primary" >Add to Cart</a>
+<a href="addToCartFromProduct-{{myscope.productId}}" class="btn btn-warning" >Add to Cart</a>
+<a href="addToWishListFromProduct-{{myscope.productId}}" class="btn btn-danger" >Add to WishList</a>
 
 </div>
 

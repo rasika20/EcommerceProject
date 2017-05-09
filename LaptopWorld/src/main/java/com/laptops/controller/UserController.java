@@ -60,5 +60,28 @@ public class UserController {
 		return "403";
 	}
 	
+	@RequestMapping("/accountProfilePage")
+	public String getAccountProfilePage()
+	{
+		return "accountprofile";
+	}
+	
+	@RequestMapping("/accountDetailsPage")
+	public String getAccountDetailsPage()
+	{
+		return "accountdetails";
+	}
+	
+	@RequestMapping("/accountShippingAddressPage")
+	public String getAccountShippingAddressPage()
+	{
+		return "accountshippingaddress";
+	}
+	
+	@RequestMapping("/accountEditShippingAddressPage")
+	public String getAccountEditShippingAddressPage()
+	{
+		return "accounteditshippingaddress";
+	}
 	
 }

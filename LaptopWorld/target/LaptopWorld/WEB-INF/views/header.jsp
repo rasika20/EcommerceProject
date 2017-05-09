@@ -2,8 +2,8 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -20,26 +20,29 @@
 <link href="resources/css/slider.css" rel="stylesheet" />
 <link href="resources/css/navbar.css" rel="stylesheet" />
 <link href="resources/css/build.css" rel="stylesheet" />
-<!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet"
-	media="all" />
-<link href="resources/css/scroller.css" rel="stylesheet" /> -->
+<link href="resources/css/body.css" rel="stylesheet" />
+
+<!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet" media="all" /> -->
+<!-- <link href="resources/css/scroller.css" rel="stylesheet" /> -->
+
 <script src="resources/js/jquery-3.2.0.min.js"></script>
 <script src="resources/js/angular.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 <script src="resources/js/backtotop.js"></script>
-<!-- <script src="resources/js/jquery.mousewheel.js"></script>
-<script src="resources/js/mwheelIntent.js"></script>
-<script src="resources/js/jquery.jscrollpane.min.js"></script>
-<script src="resources/js/scrollpane.js"></script>
-<script src="resources/js/scroller.js"></script> -->
+
+<!-- <script src="resources/js/jquery.mousewheel.js"></script> -->
+<!-- <script src="resources/js/mwheelIntent.js"></script> -->
+<!-- <script src="resources/js/jquery.jscrollpane.min.js"></script> -->
+<!-- <script src="resources/js/scrollpane.js"></script> -->
+<!-- <script src="resources/js/scroller.js"></script> -->
 
 
 <title>Laptop World</title>
 
 <style type="text/css">
 body {
-	background-image: url("resources/backgroundImages/background.jpg");
-	background-repeat: repeat;
+	/* background-image: url("resources/backgroundImages/background.jpg");
+	background-repeat: repeat; */
 	padding-top: 140px;
 }
 </style>
@@ -109,7 +112,7 @@ body {
 
 
 	<!-- Navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -191,8 +194,8 @@ body {
 						</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="#">Profile</a></li>
-								<li><a href="#">Cart</a></li>
-								<li><a href="#">Wish List</a></li>
+								<li><a href="displayCart">Cart</a></li>
+								<li><a href="displayWishList">Wish List</a></li>
 								<li><a href="#">Recent Orders</a></li>
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span

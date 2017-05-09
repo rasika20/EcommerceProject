@@ -7,7 +7,7 @@
 	z-index: 99999999;
     background-color: #07085e;
 	color: #b3db02;
-	width: 125px;
+	width: 48px;
 	height: 48px;
 	line-height: 48px;
 	right: 30px;
@@ -24,7 +24,7 @@
 	transition: all 0.5s ease-in-out;
 }
 .scroll-top-wrapper:hover {
-	background-color: #06425e;
+	background-color: #000000;
 }
 .scroll-top-wrapper.show {
     visibility:visible;

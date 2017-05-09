@@ -46,6 +46,8 @@ public class Supplier {
 	@NotEmpty(message = "Supplier Contact Number cannot be Empty")
 	private String supplierContactNo;
 
+	
+	
 	public int getSupplierId() {
 		return supplierId;
 	}

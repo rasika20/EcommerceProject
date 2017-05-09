@@ -1,5 +1,7 @@
 package com.laptops.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,9 +25,19 @@ public class CartService {
 
 		return cartDAOImpl.displayCart(userId);
 	}
+	
+	public List<CartItems> displayCartByList(int userId) {
+		
+		return cartDAOImpl.displayCartByList(userId);
+	}
 
 	public void deleteFromCart(int cartItemId) {
 
 		cartDAOImpl.deteleFromCart(cartItemId);
+	}
+	
+	public void updateCart(int cartItemId, double cartTotalAmount, int cartItemQuantity) {
+		
+		cartDAOImpl.updateCart(cartItemId, cartTotalAmount, cartItemQuantity);
 	}
 }

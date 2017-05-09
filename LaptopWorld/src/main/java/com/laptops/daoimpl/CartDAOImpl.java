@@ -30,12 +30,23 @@ public class CartDAOImpl implements CartDAO {
 		String jsonList = g.toJson(getList);
 		return jsonList;
 	}
+	
+	public List<CartItems> displayCartByList(int userId) {
+		
+		List<CartItems> getList = sessionfactory.getCurrentSession().createQuery("from CartItems where userId = " + userId).getResultList();
+		return getList;
+	}
 
 	public void deteleFromCart(int cartItemId) {
 		
 		CartItems cartItems = new CartItems();
 		cartItems.setCartItemId(cartItemId);
 		sessionfactory.getCurrentSession().delete(cartItems);
+	}
+	
+	public void updateCart(int cartItemId, double cartTotalAmount, int cartItemQuantity) {
+		
+		sessionfactory.getCurrentSession().createQuery("UPDATE CartItems SET cartItemQuantity="+cartItemQuantity+",cartTotalAmount="+cartTotalAmount+"where cartItemId="+cartItemId).executeUpdate();
 	}
 
 }
