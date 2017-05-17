@@ -3,6 +3,8 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\WishListService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\ProductDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\User.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Brand.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\ShippingAddressDAOImpl.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\ShippingAddress.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\SubCategoryDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\SubCategoryDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Product.java
@@ -17,8 +19,10 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\UserDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\CategoryController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\ProductController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\SupplierService.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\ShippingAddressController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\CategoryDAOImpl.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\WishList.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\service\ShippingAddressService.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\CartController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\WishListController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\UserController.java
@@ -31,6 +35,7 @@ D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\CartItems.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Category.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Supplier.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\model\Cart.java
+D:\NewProject\LaptopWorld\src\main\java\com\laptops\dao\ShippingAddressDAO.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\HomeController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\controller\SupplierController.java
 D:\NewProject\LaptopWorld\src\main\java\com\laptops\daoimpl\BrandDAOImpl.java

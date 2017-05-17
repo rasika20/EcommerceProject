@@ -158,10 +158,7 @@ body {
 <script>
 	var a = angular.module('myApp', []);
 	a.controller('myController', function($scope) {
-		$scope.myscope = $
-		{
-			subCategoryListByJson
-		}
+		$scope.myscope = ${subCategoryListByJson}
 	});
 </script>
 

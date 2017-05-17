@@ -40,4 +40,11 @@ public class CartService {
 		
 		cartDAOImpl.updateCart(cartItemId, cartTotalAmount, cartItemQuantity);
 	}
+	
+	public void updateCartOrders(int userId) {
+		
+		cartDAOImpl.updateCartOrders(userId);
+	}
 }
+
+

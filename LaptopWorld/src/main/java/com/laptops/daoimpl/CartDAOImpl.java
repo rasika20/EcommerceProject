@@ -33,7 +33,7 @@ public class CartDAOImpl implements CartDAO {
 	
 	public List<CartItems> displayCartByList(int userId) {
 		
-		List<CartItems> getList = sessionfactory.getCurrentSession().createQuery("from CartItems where userId = " + userId).getResultList();
+		List<CartItems> getList = sessionfactory.getCurrentSession().createQuery("from CartItems where cartItemFlag = 'FALSE' and userId = " + userId).getResultList();
 		return getList;
 	}
 
@@ -48,5 +48,9 @@ public class CartDAOImpl implements CartDAO {
 		
 		sessionfactory.getCurrentSession().createQuery("UPDATE CartItems SET cartItemQuantity="+cartItemQuantity+",cartTotalAmount="+cartTotalAmount+"where cartItemId="+cartItemId).executeUpdate();
 	}
-
+	
+	public void updateCartOrders(int userId)
+	{
+		sessionfactory.getCurrentSession().createQuery("UPDATE CartItems set cartItemFlag='TRUE' where userId="+userId).executeUpdate();
+	}
 }

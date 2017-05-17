@@ -39,18 +39,18 @@ public class SubCategory {
 	@JoinColumn(name = "categoryId", nullable = false, updatable = false, insertable = false)
 	private Category category;
 	
-	@OneToMany(mappedBy="subCategory", fetch=FetchType.EAGER)
-	private Set<Brand> brand;
+	/*@OneToMany(mappedBy="subCategory", fetch=FetchType.EAGER)
+	private Set<Brand> brand;*/
 	
 	
 
-	public Set<Brand> getBrand() {
+	/*public Set<Brand> getBrand() {
 		return brand;
 	}
 
 	public void setBrand(Set<Brand> brand) {
 		this.brand = brand;
-	}
+	}*/
 
 	public int getSubCategoryId() {
 		return subCategoryId;

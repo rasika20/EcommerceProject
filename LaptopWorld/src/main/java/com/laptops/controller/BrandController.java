@@ -27,9 +27,9 @@ public class BrandController {
 	public String getBrandPage(Model model) {
 		model.addAttribute("brand", new Brand());
 		model.addAttribute("brandList", brandService.fetchAllBrand());
-		model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());
+		/*model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());*/
 		model.addAttribute("brandListByJson", brandService.fetchAllBrandByJson());
-		model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());
+		/*model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());*/
 		model.addAttribute("btnLabel", "Add Brand");
 		return "brands";
 	}
@@ -39,8 +39,8 @@ public class BrandController {
 		if (result.hasErrors()) {
 			model.addAttribute("brandList", brandService.fetchAllBrand());
 			model.addAttribute("brandListByJson", brandService.fetchAllBrandByJson());
-			model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());
-			model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());
+			/*model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());*/
+			/*model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());*/
 			model.addAttribute("btnLabel", "Retry");
 			return "brands";
 		}
@@ -52,9 +52,9 @@ public class BrandController {
 	public String editBrand(Model model, @PathVariable("brandId") int brandId) {
 		model.addAttribute("brand", brandService.getBrandById(brandId));
 		model.addAttribute("brandList", brandService.fetchAllBrand());
-		model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());
+		/*model.addAttribute("subCategoryList", subCategoryService.fetchAllSubCategories());*/
 		model.addAttribute("brandListByJson", brandService.fetchAllBrandByJson());
-		model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());
+		/*model.addAttribute("subCategoryListByJson", subCategoryService.fetchAllSubCategoriesByJson());*/
 		model.addAttribute("btnLabel", "Edit Brand");
 		return "brands";
 	}

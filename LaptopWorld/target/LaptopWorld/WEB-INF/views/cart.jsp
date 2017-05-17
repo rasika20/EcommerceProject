@@ -42,11 +42,14 @@ body {
 					<small>In-Stock : <b>{{ciList.product.productStock}}</b></small>
 				</div>
 				<div class="col-md-2 text-center" style="font-size: 25px;">
-					<strong>
-						&#8377;
-						<fmt:formatNumber pattern="#,##0" value="${product.productFinalPrice}" />
-					</strong>
+					<strong>&#8377;{{ciList.cartTotalAmount}}</strong>
 				</div>
+				
+				
+				<%-- <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> --%>
+				<%-- <fmt:formatNumber pattern="#,##0" value="${value}" /> --%>
+				
+				
 				<div class="col-md-1 text-right">
 					<div class="tooltipright">
 						<a href="deleteFromCart-{{ciList.cartItemId}}" class="btn close" 
@@ -70,13 +73,29 @@ body {
 			<hr>
 		</div>
 		<br>
-		<div ng-if="myscope.length != 0">
+		<br>
+		<div class="row" style="border: 1px solid black; padding-top: 5px; padding-bottom: 5px;
+				border-radius: 15px; margin-left: 200px; margin-right: 200px;">
+			<div class="col-md-6 text-center" style="font-size: 30px;">
+				CART TOTAL
+			</div>
+			<div class="col-md-6 text-center" style="font-size: 30px;">
+				<strong>&#8377;${grandTotal}</strong>
+			</div>
+		</div>
+		<br>
+		<div class="text-center">
+			<strong>** Please Update Your Cart Before Checkout **</strong>
+		</div>
+		<hr>
+		<br>
+		<div>
 			<a href="#" class="btn btn-warning pull-right"
 				style="height: 40px; width: 200px; padding-top: 10px;
 				margin-left: 10px; margin-right: 10px;"> CheckOut </a>
 			<a href="updateCart"> 
 				<input type="submit" value="Update Cart" class="btn btn-primary pull-right"
-					style="height: 40px; width: 200px; padding-top: 10px;
+					style="height: 40px; width: 200px; padding-top: 8px;
 					margin-left: 10px; margin-right: 10px;" />
 			</a>
 		</div>

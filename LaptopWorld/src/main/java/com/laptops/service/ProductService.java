@@ -40,4 +40,12 @@ public class ProductService {
 		return productDAOImpl.fetchFlagProductByJson();
 	}
 	
+	public String productSearchSubCatJson(int subCategoryId) {
+		return productDAOImpl.productSearchSubCatJson(subCategoryId);
+	}
+	
+	public void updateQuantity(int productId,int productQuantity) {
+		productDAOImpl.updateQuantity(productId, productQuantity);
+	}
+	
 }

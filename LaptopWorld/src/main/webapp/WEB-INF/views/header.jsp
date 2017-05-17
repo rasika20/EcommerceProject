@@ -21,6 +21,7 @@
 <link href="resources/css/navbar.css" rel="stylesheet" />
 <link href="resources/css/build.css" rel="stylesheet" />
 <link href="resources/css/body.css" rel="stylesheet" />
+<link href="resources/css/footer.css" rel="stylesheet" />
 
 <!-- <link href="resources/css/jquery.jscrollpane.css" rel="stylesheet" media="all" /> -->
 <!-- <link href="resources/css/scroller.css" rel="stylesheet" /> -->
@@ -120,8 +121,9 @@ body {
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#"> <img alt="logo"
-				src="resources/logo/logo3.jpg">
+			<a class="navbar-brand" href="#" style="padding-top: 15px; padding-left: 25px;
+				padding-right: 30px;">
+				LaptopWorld
 			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -130,26 +132,13 @@ body {
 				<li><a href="aboutus">About us</a></li>
 				<li><a href="contactus">Contact us</a></li>
 				<li><a href="faq">FAQ</a></li>
-
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span>Search
-						<b class="caret"></b></a>
-					<ul class="dropdown-menu" style="min-width: 300px;">
-						<li>
-							<div class="row">
-								<div class="col-md-12">
-									<form class="navbar-form navbar-left" role="search">
-										<div class="input-group">
-											<input type="text" class="form-control" placeholder="Search" />
-											<span class="input-group-btn">
-												<button class="btn btn-primary" type="button">Go!</button>
-											</span>
-										</div>
-									</form>
-								</div>
-							</div>
-						</li>
-					</ul></li>
+				
+				<li>
+					<a href="shop">
+						<span class="glyphicon glyphicon-search"></span>
+						Search
+					</a>
+				</li>
 			</ul>
 
 
@@ -173,13 +162,13 @@ body {
 								class="glyphicon glyphicon-user"></span> <span class="caret"></span>
 						</a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="adminPanelPage">Admin Panel</a></li>
-								<!-- <li><a href="categoryPage">Category Management</a></li>
+								<!-- <li><a href="adminPanelPage">Admin Panel</a></li> -->
+								<li><a href="categoryPage">Category Management</a></li>
 								<li><a href="subCategoryPage">Sub-Category Management</a></li>
 								<li><a href="brandPage">Brand Management</a></li>
 								<li><a href="supplierPage">Supplier Management</a></li>
 								<li><a href="productPage">Product Management</a></li>
-								<li><a href="#">User Management</a></li> -->
+								<li><a href="#">User Management</a></li>
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span
 										class="glyphicon glyphicon-log-out"></span></a></li>
@@ -187,11 +176,12 @@ body {
 					</sec:authorize>
 
 					<sec:authorize access="hasRole('ROLE_USER')">
-						<li class="dropdown"><a href="#" class="dropdown-toggle"
-							data-toggle="dropdown">
-								${pageContext.request.userPrincipal.name} <span
-								class="glyphicon glyphicon-user"></span> <span class="caret"></span>
-						</a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								${pageContext.request.userPrincipal.name}
+								<span class="glyphicon glyphicon-user"></span>
+								<span class="caret"></span>
+							</a>
 							<ul class="dropdown-menu" role="menu">
 								<li><a href="accountProfilePage">Profile</a></li>
 								<li class="divider"></li>
@@ -201,14 +191,46 @@ body {
 								<li class="divider"></li>
 								<li><a href="logout">Logout <span
 										class="glyphicon glyphicon-log-out"></span></a></li>
-							</ul></li>
+							</ul>
+							
+						</li>
 					</sec:authorize>
 
 				</c:if>
 			</ul>
+			
 		</div>
+		<div class="row pull-left">
+                <div class="col-md-12">
+                    <ul class="nav navbar-nav pull-right">
+                        <c:forEach items="${globalCategory}" var="category">
+                        	<li class="dropdown">
+                        		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        			${category.categoryName}
+                        			<span class="caret"></span>
+                        		</a>
+                        		<ul class="dropdown-menu" role="menu">
+                        		
+                        		
+                        			<c:forEach items="${globalSubCategory}" var="subCategory">
+                        			<c:if test="${subCategory.categoryId eq category.categoryId}">
+                        				<li><a href="shop-${subCategory.subCategoryId}">
+                        					${subCategory.subCategoryName}</a>
+                        				</li>
+                        			</c:if>
+                        				
+                        			</c:forEach>
+                        		</ul>
+                        	</li>
+                        </c:forEach>
+                        
+                    </ul>
+                </div>
+            </div>
 	</div>
 	</nav>
+
+
 
 
 

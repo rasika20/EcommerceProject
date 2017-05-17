@@ -90,7 +90,7 @@ body {
 		<hr>
 		<br>
 		<div>
-			<a href="#" class="btn btn-warning pull-right"
+			<a href="checkout" class="btn btn-warning pull-right"
 				style="height: 40px; width: 200px; padding-top: 10px;
 				margin-left: 10px; margin-right: 10px;"> CheckOut </a>
 			<a href="updateCart"> 

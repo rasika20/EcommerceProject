@@ -58,7 +58,7 @@ public class Product {
 	
 	@Expose
 	private int categoryId;
-
+	
 	@Expose
 	private int subCategoryId;
 

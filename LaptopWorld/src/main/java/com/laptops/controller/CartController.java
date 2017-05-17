@@ -132,4 +132,44 @@ public class CartController {
 		return "redirect:/displayCart";
 	}
 	
+	@RequestMapping("/checkout")
+	public String getCheckOutPage(Model model, Principal p) {
+		
+		String username = p.getName();
+		int u = userService.getIdByUser(username).getUserId();
+		
+		List<CartItems> cart = cartService.displayCartByList(u);
+		double finalPrice = 0;
+		
+		for(int i=0;i<cart.size();i++) {
+			CartItems item = cart.get(i);
+			finalPrice = finalPrice + item.getCartTotalAmount();
+		}
+		
+		model.addAttribute("grandTotal", finalPrice);
+		
+		model.addAttribute("display", cartService.displayCart(u));
+		return "checkout";
+	}
+	
+	@RequestMapping("/placeOrders")
+	public String placeOrders(Principal p)
+	{
+		int uid=userService.getIdByUser(p.getName()).getUserId();
+		List<CartItems> list=cartService.displayCartByList(uid);
+		for(CartItems i: list)
+		{
+			int pid=i.getProductId();
+			int quant=i.getCartItemQuantity();
+			System.out.println(quant);
+			int productQuantity=productService.getProductById(pid).getProductStock();
+			System.out.println(productQuantity);
+			int finalQuantity=productQuantity-quant;
+			System.out.println(finalQuantity);
+			cartService.updateCartOrders(uid);
+			productService.updateQuantity(pid,finalQuantity);
+			
+		}
+		return "index";
+	}
 }

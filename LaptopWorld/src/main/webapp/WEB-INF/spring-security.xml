@@ -26,14 +26,14 @@
 		
 		
 
-		<!-- <intercept-url pattern="/categoryPage" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/categoryPage" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/subCategoryPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/brandPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/supplierPage" access="hasRole('ROLE_ADMIN')"/>
 		<intercept-url pattern="/productPage" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/logout" access="hasRole('ROLE_ADMIN, ROLE_USER')" /> -->
+		
 
-		<!-- access denied page -->
+		
 		<access-denied-handler error-page="/403" />
 
 		<form-login login-page="/loginPage" 
@@ -45,7 +45,7 @@
 			<logout logout-success-url="/?logout" />
 			
 		<!-- enable csrf protection -->
-		<csrf disabled="true" />
+		 <csrf disabled="true" />
 	</http>
 
 </beans:beans>

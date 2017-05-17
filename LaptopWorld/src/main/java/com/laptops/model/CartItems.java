@@ -55,9 +55,10 @@ public class CartItems {
 	
 	@Expose
 	private double cartTotalAmount;
+	
+	@Expose
+	private boolean cartItemFlag = false;
 
-	
-	
 	public int getCartItemId() {
 		return cartItemId;
 	}
@@ -154,5 +155,14 @@ public class CartItems {
 		this.cartTotalAmount = cartTotalAmount;
 	}
 
+	public boolean isCartItemFlag() {
+		return cartItemFlag;
+	}
+
+	public void setCartItemFlag(boolean cartItemFlag) {
+		this.cartItemFlag = cartItemFlag;
+	}
+
+	
 		
 }

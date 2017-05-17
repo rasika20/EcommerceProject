@@ -61,7 +61,7 @@ body {
 				</div>
 			</div>
 			<br>
-			<div class="row">
+			<%-- <div class="row">
 				<div class="col-xs-12 col-sm-4  col-md-4">
 					<form:label path="subCategoryId">Select SubCategory of Brand</form:label>
 				</div>
@@ -71,7 +71,7 @@ body {
 						itemLabel="subCategoryName" />
 				</div>
 			</div>
-			<br>
+			<br> --%>
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
 					<div class="text-center">
@@ -122,7 +122,7 @@ body {
 					<tr>
 						<th>Brand Name</th>
 						<th>Brand Description</th>
-						<th>Sub-Category Name</th>
+						<!-- <th>Sub-Category Name</th> -->
 						<th>Brand Edit</th>
 						<th>Brand Delete</th>
 					</tr>
@@ -131,7 +131,7 @@ body {
 					<tr ng-repeat="bList in myscope | filter:search">
 						<td>{{bList.brandName}}</td>
 						<td>{{bList.brandDescription}}</td>
-						<td>{{bList.subCategory.subCategoryName}}</td>
+						<!-- <td>{{bList.subCategory.subCategoryName}}</td> -->
 						<td><a href="editBrand-{{bList.brandId}}"
 							class="btn btn-primary" role="button">EDIT</a></td>
 						<td><a href="deleteBrand-{{bList.brandId}}"

@@ -18,4 +18,6 @@ public interface ProductDAO {
 
 	public void deleteProduct(int productId);
 	
+	public String productSearchSubCatJson(int subCategoryId);
+	
 }

@@ -27,13 +27,13 @@ public class Brand {
 	@NotEmpty(message = "Brand Description cannot be Empty")
 	private String brandDescription;
 	
-	@Expose
+	/*@Expose
 	private int subCategoryId;
 	
 	@Expose
 	@ManyToOne
 	@JoinColumn(name="subCategoryId", nullable=false, updatable=false, insertable=false)
-	private SubCategory subCategory;
+	private SubCategory subCategory;*/
 
 	public int getBrandId() {
 		return brandId;
@@ -59,7 +59,7 @@ public class Brand {
 		this.brandDescription = brandDescription;
 	}
 
-	public int getSubCategoryId() {
+	/*public int getSubCategoryId() {
 		return subCategoryId;
 	}
 
@@ -74,6 +74,6 @@ public class Brand {
 	public void setSubCategory(SubCategory subCategory) {
 		this.subCategory = subCategory;
 	}
-	
+	*/
 	
 }
