@@ -79,6 +79,23 @@ public class WishListController {
 		return "redirect:/viewProduct-{productId}";
 	}
 	
+	@RequestMapping("/addToWishListFromShop-{productId}")
+	public String addToWishListFromShop(Principal p, @ModelAttribute("wishListItems") WishListItems wishListItems,
+			@PathVariable("productId") int productId) {
+
+		String username = p.getName();
+		int u = userService.getIdByUser(username).getUserId();
+
+		wishListItems.setWishListId(u);
+		wishListItems.setUserId(u);
+		wishListItems.setProductId(productService.getProductById(productId).getProductId());
+		wishListItems.setProductName(productService.getProductById(productId).getProductName());
+		wishListItems.setOldAmount(productService.getProductById(productId).getProductActualPrice());
+		wishListItems.setNewAmount(productService.getProductById(productId).getProductFinalPrice());
+		wishListService.addToWishList(wishListItems);
+		return "redirect:/shop";
+	}
+	
 	@RequestMapping("/displayWishList")
 	public String displayWishList(Principal p,Model model) {
 		

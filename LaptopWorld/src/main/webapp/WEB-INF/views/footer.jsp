@@ -7,22 +7,27 @@
 <div class="footer">
 	<div class="container1 row">
 		<span class="col-md-2" style="font-size: 20px;"><b>Connect with us : </b></span>
-        <a href="www.facebook.com/LaptopWorld"><i class="fa fa-facebook fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
-        <a href="www.twitter.com/LaptopWorld"><i class="fa fa-twitter fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
-		<a href="www.instagram.com/LaptopWorld"><i class="fa fa-instagram fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
-		<a href="www.steamcommunity.com/id/LaptopWorld"><i class="fa fa-steam fa-3x fa-fw col-md-1"></i></a>
+        <a href="www.facebook.com/LaptopWorld" title="Facebook"><i class="fa fa-facebook fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
+        <a href="www.twitter.com/LaptopWorld" title="Twitter"><i class="fa fa-twitter fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
+		<a href="www.instagram.com/LaptopWorld" title="Instagram"><i class="fa fa-instagram fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
+		<a href="www.steamcommunity.com/id/LaptopWorld" title="Steam"><i class="fa fa-steam fa-3x fa-fw col-md-1" style="margin-right: 10px;"></i></a>
+		<a href="laptopworld@gmail.com" title="Email"><i class="fa fa-envelope-o fa-3x fa-fw col-md-1"></i></a>
 		
-		<button type="submit" class="pull-right col-md-1">SUBSCRIBE</button>
-		<input type="text" name="sub" placeholder="Email ID.." class="pull-right col-md-3"
+		<button type="submit" class="pull-right col-md-1 btn btn-warning" style="margin-left: 5px;">
+			SUBSCRIBE
+		</button>
+		<input type="text" name="sub" placeholder="Email ID.." class=" pull-right col-md-3"
 			style="color: black;">
 		
 		<br><br>
 		
 		<div class="container1 row">
-			<span class="col-md-2" style="font-size: 20px;"><b>Get to know us &nbsp; : </b></span>
-			<a href="aboutus" style="font-size: 20px; margin-left: 10px;"> About us </a> &nbsp;&nbsp;&nbsp;
-			<a href="contactus" style="font-size: 20px;"> Contact us </a> &nbsp;&nbsp;&nbsp;
-			<a href="faq" style="font-size: 20px;"> FAQ </a>
+			<span class="col-md-2" style="font-size: 20px;"><b>&nbsp;&nbsp;&nbsp;Get to know us &nbsp; : </b></span>
+			<a href="aboutus" style="font-size: 20px; margin-left: 10px;"> &nbsp;&nbsp;About us </a> &nbsp;&nbsp;&nbsp; -
+			<a href="contactus" style="font-size: 20px;">&nbsp;&nbsp; Contact us </a> &nbsp;&nbsp;&nbsp; -
+			<a href="faq" style="font-size: 20px;"> &nbsp;&nbsp;&nbsp;FAQ </a> &nbsp;&nbsp;&nbsp; -
+			<a href="terms" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;Terms and Conditions</a> &nbsp;&nbsp;&nbsp; -
+			<a href="privacypolicy" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;Privacy Policy</a>&nbsp;&nbsp;&nbsp;
 		</div>
 		
 		<br><br>

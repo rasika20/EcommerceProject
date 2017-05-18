@@ -24,12 +24,22 @@ public class ShopController {
 	
 	
 	
-	@RequestMapping("/shop-{subCategoryID}")
+	@RequestMapping("/shopSubCat-{subCategoryId}")
 	public String productSearchSubCatJson(@PathVariable("subCategoryId") int subCategoryId,
 			Model model) {
 		
+		model.addAttribute("subCategory", subCategoryService.fetchAllSubCategoriesByJson());
+		model.addAttribute("display", productService.productSearchSubCatJson(subCategoryId));
+		
+		return "shop";
+	}
+	
+	@RequestMapping("/shopCat-{categoryId}")
+	public String productSearchCatJson(@PathVariable("categoryId") int categoryId,
+			Model model) {
+		
 		model.addAttribute("category", categoryService.fetchAllCategoriesByJson());
-		model.addAttribute("displayProduct", productService.productSearchSubCatJson(subCategoryId));
+		model.addAttribute("display", productService.productSearchCatJson(categoryId));
 		
 		return "shop";
 	}

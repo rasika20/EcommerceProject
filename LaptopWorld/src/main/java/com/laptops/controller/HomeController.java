@@ -63,26 +63,15 @@ public class HomeController {
 		return "redirect:/";
 	}
 	
+	@RequestMapping("/terms")
+	public String getTermsPage() {
+		return "terms";
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*URL url = new URL(request.getRequestURL().toString());
-    String host  = url.getHost();
-    String userInfo = url.getUserInfo();
-    String scheme = url.getProtocol();
-    String port = url.getPort();
-    String path = request.getAttribute("javax.servlet.forward.request_uri");
-    String query = request.getAttribute("javax.servlet.forward.query_string");
-
-    URI uri = new URI(scheme,userInfo,host,port,path,query,null)
-    return uri.toString();*/
+	@RequestMapping("/privacypolicy")
+	public String getPrivacyPolicyPage() {
+		return "privacypolicy";
+	}
 	
 	
 }

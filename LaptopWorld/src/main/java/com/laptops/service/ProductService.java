@@ -48,4 +48,8 @@ public class ProductService {
 		productDAOImpl.updateQuantity(productId, productQuantity);
 	}
 	
+	public String productSearchCatJson(int categoryId) {
+		return productDAOImpl.productSearchCatJson(categoryId);
+	}
+	
 }

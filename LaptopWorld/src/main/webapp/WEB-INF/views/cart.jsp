@@ -14,9 +14,16 @@ body {
 
 <div class="container">
 	<div ng-app="myApp" ng-controller="myController">
+		<h1 class="text-center"><strong>Cart</strong></h1>
+		<br>
+		<br>
 		<form:form action="updateCart" modelAttribute="cartItems">
-		
+		<div ng-if="myscope.length==0" class="text-center" style="font-size: 25px;">
+			You have No Items in Cart.Go to <a href="shop">Shop</a>
+		</div>
+		<div ng-if="myscope.length!=0">
 		<div ng-repeat="ciList in myscope">
+		
 			<div class="row">
 				<div class="col-md-3">
 					<img src="resources/productImages/productImage-{{ciList.productId}}.jpg" 
@@ -72,6 +79,7 @@ body {
 			</div>
 			<hr>
 		</div>
+		
 		<br>
 		<br>
 		<div class="row" style="border: 1px solid black; padding-top: 5px; padding-bottom: 5px;
@@ -98,6 +106,7 @@ body {
 					style="height: 40px; width: 200px; padding-top: 8px;
 					margin-left: 10px; margin-right: 10px;" />
 			</a>
+		</div>
 		</div>
 		</form:form>
 	</div>

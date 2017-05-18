@@ -24,7 +24,7 @@ public class ShippingAddressDAOImpl implements ShippingAddressDAO {
 	public ShippingAddress displayShippingAddress(int userId) {
 		
 		List<ShippingAddress> shippingAddress = sessionFactory.getCurrentSession().createQuery("from ShippingAddress where userId = "+userId).getResultList();
-		return null;
+		return shippingAddress.get(0);
 	}
 
 }

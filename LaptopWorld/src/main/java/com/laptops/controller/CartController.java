@@ -86,6 +86,25 @@ public class CartController {
 		cartService.addToCart(cartItems);
 		return "redirect:/viewProduct-{productId}";
 	}
+	
+	@RequestMapping("/addToCartFromShop-{productId}")
+	public String addToCartFromShop(Principal p, @ModelAttribute("cartItems") CartItems cartItems,
+			@PathVariable("productId") int productId) {
+
+		String username = p.getName();
+		int u = userService.getIdByUser(username).getUserId();
+
+		cartItems.setCartId(u);
+		cartItems.setUserId(u);
+		cartItems.setProductId(productService.getProductById(productId).getProductId());
+		cartItems.setProductName(productService.getProductById(productId).getProductName());
+		cartItems.setCartItemQuantity(1);
+		cartItems.setOldAmount(productService.getProductById(productId).getProductActualPrice());
+		cartItems.setNewAmount(productService.getProductById(productId).getProductFinalPrice());
+		cartItems.setCartTotalAmount(productService.getProductById(productId).getProductFinalPrice());
+		cartService.addToCart(cartItems);
+		return "redirect:/shop";
+	}
 
 	@RequestMapping("/displayCart")
 	public String displayCart(Principal p,Model model) {

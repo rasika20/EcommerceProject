@@ -25,14 +25,19 @@
 		</session-management>
 		
 		
-
-		<intercept-url pattern="/categoryPage" access="hasRole('ROLE_USER')" />
+		<!-- ADMIN ACCESS ONLY -->
+		<intercept-url pattern="/categoryPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/subCategoryPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/brandPage" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/supplierPage" access="hasRole('ROLE_ADMIN')"/>
 		<intercept-url pattern="/productPage" access="hasRole('ROLE_ADMIN')" />
 		
-
+		
+		<!-- USER ACCESS ONLY -->
+		
+		
+		
+		
 		
 		<access-denied-handler error-page="/403" />
 
